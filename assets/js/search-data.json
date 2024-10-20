@@ -13,103 +13,103 @@
     
     "relUrl": "/Setup/"
   },"2": {
-    "doc": "Home",
-    "title": "DataCROP™ Information",
-    "content": "DataCROP™ (Data Collection Routing &amp; Processing) is a Data collection framework which provides the specifications and relevant implementation to enable a real time data collection, transformation, filtering, and management service to facilitate data consumers (i.e., analytic algorithms). The framework can be applied in IoT environments supporting solutions in various domains (e.g., Industrial, Cybersecurity, etch.). For example, the solution may be used to collect security related data (e.g., network, system, solution proprietary, etch.) from monitored IoT systems and store them to detect patterns of abnormal behaviour by applying simple (i.e., filtering and pre-processing) or more elaborated mechanisms (i.e., AI algorithms). The design of the framework is driven by configurability, extensibility, dynamic setup, stream handling capabilities and Blockchain (Ledger) support. One of the key features of the framework is that it is detached from the underlying infrastructure by employing a specialized data model for modelling the solution’s Data Sources, Processors and Results which facilitates the data interoperability discoverability and configurability of the offered solution. ",
-    "url": "/maize-datacrop/home/#datacrop-information",
-    
-    "relUrl": "/home/#datacrop-information"
-  },"3": {
-    "doc": "Home",
-    "title": "Demonstrator",
-    "content": "A DataCROP™ Farro version demo infrastracture instance, which can be deployed locally, can be found at the farro-demo-deployment-scripts repository. ",
-    "url": "/maize-datacrop/home/#demonstrator",
-    
-    "relUrl": "/home/#demonstrator"
-  },"4": {
-    "doc": "Home",
-    "title": "Technologies/Framework",
-    "content": "DataCROP has been developed and applied in various iterations, within the context of various EU projects, with different dependencies . DataCROP™ Barley (v1.0) Outcome of FAR-EDGE EU Project . | MongoDB | Apache Kafka (Inter-Data Bus) | RabitMQ (Data Input interface) | Kafka Streams (Stream Processing) | NodeJS (Component Implementation) | React (UI) | Hyperledger Fabric (optional Blockchain support) | . DataCROP™ Farro (v2.0) Outcome of Barley version and PROPHESY EU project . | MongoDB | Apache Kafka (Inter-Data Bus communication &amp; input/output interface) | RabbitMQ (Data Input interface) | Algorithms: ** Java Algorithms (Qarma) ** Python Algorithms (RUL feature extraction &amp; Health Index Calculation) ** R Algorithms | NodeJS (Component Implementation) | React (UI) | . DataCROP™ Maize :corn: (V3.0) - (under construction :construction:) Outcome of Farro version and SecureIoT, IoTAC EU projects . | MongoDB | Apache Kafka (Inter-Data Bus) | ELK Stack | Additional to be included as developments evolves | . ",
-    "url": "/maize-datacrop/home/#technologiesframework",
-    
-    "relUrl": "/home/#technologiesframework"
-  },"5": {
-    "doc": "Home",
-    "title": "Maturity Level / Active years",
-    "content": "V1.0 - TRL 6 Designed/Developed and demonstrated under the FAR-EDGE (2016-2019) project . V2.0 - TRL6 Designed/Developed and demonstrated under the H2020 PROPHESY (2017-2020) project. Demonstrated under the QU4LITY (2019-2022) project . V3.0 – TRL4 (Under design/Development) Designed/Developed under the SecureIoT (2018-2021) project, IoTAC (2020-2023), STAR (2020-2023) . ",
-    "url": "/maize-datacrop/home/#maturity-level--active-years",
-    
-    "relUrl": "/home/#maturity-level--active-years"
-  },"6": {
-    "doc": "Home",
-    "title": "Future/ Interest Steps",
-    "content": ". | Intergrade the design/data models/components into one platform/infrastructure independent solution. | Support additional data collection, data processing and data offering services. | Offer an intuitive and user-friendly configuration toolbox (UI). | Offer data visualization mechanisms (UI). | Blockchain (Hyperledger Fabric) integration supporting the configurations and results of the solution. | . ",
-    "url": "/maize-datacrop/home/#future-interest-steps",
-    
-    "relUrl": "/home/#future-interest-steps"
-  },"7": {
-    "doc": "Home",
-    "title": "Links:",
-    "content": ". | Contact DataCROP | Report Issues/Problems | DataCROP Forum | Website (under construction :construction:) | DataCROP@DockerHub | Stats@OpenHUB | . ",
-    "url": "/maize-datacrop/home/#links",
-    
-    "relUrl": "/home/#links"
-  },"8": {
-    "doc": "Home",
-    "title": "Home",
-    "content": " ",
-    "url": "/maize-datacrop/home/",
-    
-    "relUrl": "/home/"
-  },"9": {
     "doc": "1. Airflow Setup",
     "title": "DataCROP Maize Airflow Processing Engine Deployment",
     "content": "This is a demo deployment instance for the Maize DataCROP version. It deploys the Airflow web server responsible for managing tasks within the DataCROP Workflow Management Engine infrastructure. The deployment consists of six containers. ",
     "url": "/maize-datacrop/airflow/#datacrop-maize-airflow-processing-engine-deployment",
     
     "relUrl": "/airflow/#datacrop-maize-airflow-processing-engine-deployment"
-  },"10": {
+  },"3": {
     "doc": "1. Airflow Setup",
     "title": "Overview",
     "content": "The DataCROP Maize Airflow Processing Engine is a critical component of the DataCROP Workflow Management Engine. This engine is responsible for orchestrating and managing the execution of various tasks (DAGs) within the DataCROP infrastructure, providing an interface to monitor and manage workflows through the Airflow webserver. ",
     "url": "/maize-datacrop/airflow/#overview",
     
     "relUrl": "/airflow/#overview"
-  },"11": {
+  },"4": {
     "doc": "1. Airflow Setup",
     "title": "Requirements",
     "content": ". | Docker-CE | . ",
     "url": "/maize-datacrop/airflow/#requirements",
     
     "relUrl": "/airflow/#requirements"
-  },"12": {
+  },"5": {
     "doc": "1. Airflow Setup",
     "title": "Prerequisites",
     "content": "Before proceeding with the deployment, make sure to complete the following steps: . | Update Configuration Files: . | .env File: . | Navigate to the .env file and update the following parameters: . | HOST_IP: Set this to the IP address of the host machine where the Airflow infrastructure is deployed. | CELERY_WEB_UNAME: Set this to your desired username for accessing the Celery Flower dashboard. | CELERY_WEB_PSSWD: Set this to your desired password for the Celery Flower dashboard. | . | . | Docker Compose File: . | Navigate to the docker-compose.yml file and update the following: . | In the extra_hosts section, change the IP address of remote_worker01 to the IP address of your remote worker machine. | If your worker has a different name, replace remote_worker01 with the correct name of your worker. | . | . | . | SSH Configuration: . | Ensure that SSH keys are generated on all machines that are part of this infrastructure. | Add the SSH keys from each machine to the authorized_keys file on all other machines in the infrastructure to allow passwordless SSH access. | . | . Once these steps are completed, you can proceed with the deployment process. Start The Application. | Navigate to the source directory containing the docker-compose.yml file. | Run the following command: . docker compose up -d . | . Verify that everything is up and running . Wait for the services to start, then run the following commands: . | Check if the container is running (change worker_name with the actual name that you specified in the .env file): . docker ps --filter name=airflow_core --format \"table \\t\" . You should see the following output: . IMAGE NAMES airflow_core-airflow-triggerer airflow_core-airflow-triggerer-1 airflow_core-airflow-webserver airflow_core-airflow-webserver-1 airflow_core-flower airflow_core-flower-1 airflow_core-airflow-scheduler airflow_core-airflow-scheduler-1 postgres:13 airflow_core-postgres-1 redis:7.2 airflow_core-redis-1 . | . Make Sure Everything Works . | Access the Flower Web App: . | Open a browser and navigate to http://{Your IP}:5555/workers. | Log in using the celery credentials you provided in the .env file. | After successful authentication, you should be redirected to the workers page, confirming that Celery was set up correctly. | . | Access the Airflow Web App: . | Open a browser and go to http://{Your IP}:8080/home. | Log in using the credentials provided by your organization for Airflow. | You should see all the available DAGs listed, confirming that your DAGs folder is properly configured. | . | . Stop everything. Navigate to the source directory and run the following command. docker-compose down . ",
     "url": "/maize-datacrop/airflow/#prerequisites",
     
     "relUrl": "/airflow/#prerequisites"
-  },"13": {
+  },"6": {
     "doc": "1. Airflow Setup",
     "title": "1. Airflow Setup",
     "content": " ",
     "url": "/maize-datacrop/airflow/",
     
     "relUrl": "/airflow/"
-  },"14": {
+  },"7": {
     "doc": "4. Workflow Editor Setup",
     "title": "DataCROP Maize Workflow Management Editor Deployment",
     "content": "This is a demo deployment instance for the Maize DataCROP version. It deploys the DataCROP Workflow Management Engine web application for creating and managing workflows. The deployment consists of a single container. Prerequisites . Before proceeding, ensure you have completed the setup instructions for the Maize Model Repository. After completing the setup, follow these steps: . | Navigate to the .env file in the ui directory. | Update the file with the correct IP address of the host used for the model repository infrastructure by filling in the following parameters: . VITE_API_URL=http://&lt;YOUR_HOST_IP&gt;:9090 VITE_BACKEND_IP=&lt;YOUR_HOST_IP&gt; VITE_AIRFLOW_IP=&lt;YOUR_HOST_IP&gt; . Replace &lt;YOUR_HOST_IP&gt; with the actual IP address of the machine hosting your Maize Model Repository infrastructure. | . Once these parameters are correctly set, you can proceed with the deployment. REQUIREMENTS . | Docker-CE | . Start The Application. | Clone the repository and navigate to the source directory containing the docker-compose.yml file. | Run the following command: . docker compose up -d . | . Verify that everything is up and running . Wait for the services to start, then run the following commands: . | Check if the container is running: . docker ps --filter name=wme-ui --format \"table \\t\" . You should see the following output: . IMAGE NAMES node:lts-alpine wme-ui . | Check if the network is set up correctly: . docker network ls --filter name=\"maze-workflow-management-editor_wme-network\" --format \"table \\t\\t\" . Ensure the output matches the following: . NAME DRIVER SCOPE maze-workflow-management-editor_wme-network bridge local . | . Make Sure Everything Works . | Open a browser and navigate to the web application. | You will be redirected to the Keycloak authentication page. Enter the credentials provided by your organization. | After successful authentication, you will be redirected to the main page of the workflow management engine, where you can begin creating and managing workflows. | . Stop everything. Navigate to the source directory and run the following command. docker-compose down . ",
     "url": "/maize-datacrop/editor/#datacrop-maize-workflow-management-editor-deployment",
     
     "relUrl": "/editor/#datacrop-maize-workflow-management-editor-deployment"
-  },"15": {
+  },"8": {
     "doc": "4. Workflow Editor Setup",
     "title": "4. Workflow Editor Setup",
     "content": " ",
     "url": "/maize-datacrop/editor/",
     
     "relUrl": "/editor/"
+  },"9": {
+    "doc": "Home",
+    "title": "DataCROP™ Information",
+    "content": "DataCROP™ (Data Collection Routing &amp; Processing) is a Data collection framework which provides the specifications and relevant implementation to enable a real time data collection, transformation, filtering, and management service to facilitate data consumers (i.e., analytic algorithms). The framework can be applied in IoT environments supporting solutions in various domains (e.g., Industrial, Cybersecurity, etch.). For example, the solution may be used to collect security related data (e.g., network, system, solution proprietary, etch.) from monitored IoT systems and store them to detect patterns of abnormal behaviour by applying simple (i.e., filtering and pre-processing) or more elaborated mechanisms (i.e., AI algorithms). The design of the framework is driven by configurability, extensibility, dynamic setup, stream handling capabilities and Blockchain (Ledger) support. One of the key features of the framework is that it is detached from the underlying infrastructure by employing a specialized data model for modelling the solution’s Data Sources, Processors and Results which facilitates the data interoperability discoverability and configurability of the offered solution. ",
+    "url": "/maize-datacrop/home/#datacrop-information",
+    
+    "relUrl": "/home/#datacrop-information"
+  },"10": {
+    "doc": "Home",
+    "title": "Demonstrator",
+    "content": "A DataCROP™ Farro version demo infrastracture instance, which can be deployed locally, can be found at the farro-demo-deployment-scripts repository. ",
+    "url": "/maize-datacrop/home/#demonstrator",
+    
+    "relUrl": "/home/#demonstrator"
+  },"11": {
+    "doc": "Home",
+    "title": "Technologies/Framework",
+    "content": "DataCROP has been developed and applied in various iterations, within the context of various EU projects, with different dependencies . DataCROP™ Barley (v1.0) Outcome of FAR-EDGE EU Project . | MongoDB | Apache Kafka (Inter-Data Bus) | RabitMQ (Data Input interface) | Kafka Streams (Stream Processing) | NodeJS (Component Implementation) | React (UI) | Hyperledger Fabric (optional Blockchain support) | . DataCROP™ Farro (v2.0) Outcome of Barley version and PROPHESY EU project . | MongoDB | Apache Kafka (Inter-Data Bus communication &amp; input/output interface) | RabbitMQ (Data Input interface) | Algorithms: ** Java Algorithms (Qarma) ** Python Algorithms (RUL feature extraction &amp; Health Index Calculation) ** R Algorithms | NodeJS (Component Implementation) | React (UI) | . DataCROP™ Maize :corn: (V3.0) - (under construction :construction:) Outcome of Farro version and SecureIoT, IoTAC EU projects . | MongoDB | Apache Kafka (Inter-Data Bus) | ELK Stack | Additional to be included as developments evolves | . ",
+    "url": "/maize-datacrop/home/#technologiesframework",
+    
+    "relUrl": "/home/#technologiesframework"
+  },"12": {
+    "doc": "Home",
+    "title": "Maturity Level / Active years",
+    "content": "V1.0 - TRL 6 Designed/Developed and demonstrated under the FAR-EDGE (2016-2019) project . V2.0 - TRL6 Designed/Developed and demonstrated under the H2020 PROPHESY (2017-2020) project. Demonstrated under the QU4LITY (2019-2022) project . V3.0 – TRL4 (Under design/Development) Designed/Developed under the SecureIoT (2018-2021) project, IoTAC (2020-2023), STAR (2020-2023) . ",
+    "url": "/maize-datacrop/home/#maturity-level--active-years",
+    
+    "relUrl": "/home/#maturity-level--active-years"
+  },"13": {
+    "doc": "Home",
+    "title": "Future/ Interest Steps",
+    "content": ". | Intergrade the design/data models/components into one platform/infrastructure independent solution. | Support additional data collection, data processing and data offering services. | Offer an intuitive and user-friendly configuration toolbox (UI). | Offer data visualization mechanisms (UI). | Blockchain (Hyperledger Fabric) integration supporting the configurations and results of the solution. | . ",
+    "url": "/maize-datacrop/home/#future-interest-steps",
+    
+    "relUrl": "/home/#future-interest-steps"
+  },"14": {
+    "doc": "Home",
+    "title": "Links:",
+    "content": ". | Contact DataCROP | Report Issues/Problems | DataCROP Forum | Website (under construction :construction:) | DataCROP@DockerHub | Stats@OpenHUB | . ",
+    "url": "/maize-datacrop/home/#links",
+    
+    "relUrl": "/home/#links"
+  },"15": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/maize-datacrop/home/",
+    
+    "relUrl": "/home/"
   },"16": {
     "doc": "3. Model Repository Setup",
     "title": "DataCROP Maize Model Repository Deployment",
