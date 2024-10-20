@@ -38,6 +38,7 @@ remote_theme: giannistbsnet/just-my-theme-doc@main
 search_enabled: true
 
 plugins:
+  - jekyll-default-layout
   - jekyll-remote-theme
   - jekyll-feed
 
