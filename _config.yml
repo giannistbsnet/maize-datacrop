@@ -30,13 +30,14 @@ github_username:  giannistbsnet
 # Build settings
 # theme: just-the-docs
 # remote_theme: giannistbsnet/just-my-theme-doc@main
+remote_theme: just-the-docs/just-the-docs
 
 
 search_enabled: true
 
 plugins:
-  - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
