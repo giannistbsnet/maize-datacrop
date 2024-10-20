@@ -1,3 +1,10 @@
+---
+layout: page
+title: Home
+permalink: /home/
+nav_order: 1
+---
+
 # DataCROP&#8482; Information 
 DataCROP&#8482; (Data Collection Routing & Processing) is a Data collection framework which provides the specifications and relevant implementation to enable a real time data collection, transformation, filtering, and management service to facilitate data consumers (i.e., analytic algorithms). The framework can be applied in IoT environments supporting solutions in various domains (e.g., Industrial, Cybersecurity, etch.). For example, the solution may be used to collect security related data (e.g., network, system, solution proprietary, etch.) from monitored IoT systems and store them to detect patterns of abnormal behaviour by applying simple (i.e., filtering and pre-processing) or more elaborated mechanisms (i.e., AI algorithms). The design of the framework is driven by configurability, extensibility, dynamic setup, stream handling capabilities and Blockchain (Ledger) support. One of the key features of the framework is that it is detached from the underlying infrastructure by employing a specialized data model for modelling the solution’s Data Sources, Processors and Results which facilitates the data interoperability discoverability and configurability of the offered solution.    
 
@@ -73,3 +80,4 @@ Designed/Developed under the SecureIoT (2018-2021) project, IoTAC (2020-2023), S
 * [Website](http://www.datacrop.eu/) (under construction :construction:)
 * [DataCROP@DockerHub](https://hub.docker.com/u/datacrop)
 * [Stats@OpenHUB](https://www.openhub.net/p/datacrop)
+
