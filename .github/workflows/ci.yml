@@ -3,7 +3,7 @@ name: Jekyll Site
 on:
   push:
     branches:
-      - main  # Change to your default branch if necessary
+      - main  # Change to your default branch if necessarydd
 
 jobs:
   build:
