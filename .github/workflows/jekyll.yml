@@ -29,6 +29,9 @@ jobs:
       - name: Check _site directory
         run: ls -la _site
 
+      - name: Check . directory
+        run: ls -la .
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
