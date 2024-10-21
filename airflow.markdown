@@ -55,7 +55,7 @@ Wait for the services to start, then run the following commands:
 - Check if the container is running (change `worker_name` with the actual name that you specified in the .env file):
 
     ```bash
-    docker ps --filter name=airflow_core --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
+    docker ps --filter name=airflow --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:
