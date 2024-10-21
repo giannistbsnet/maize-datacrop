@@ -50,7 +50,7 @@ Wait for the services to start, then run the following commands:
 1. Check if the container is running:
 
     ```bash
-    docker ps --filter name=wme-ui --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=wme-ui --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:
@@ -63,7 +63,7 @@ Wait for the services to start, then run the following commands:
 2. Check if the network is set up correctly:
 
     ```bash
-    docker network ls --filter name="maze-workflow-management-editor_wme-network" --format "table {{.Name}}\t{{.Driver}}\t{{.Scope}}"
+    docker network ls --filter name="maze-workflow-management-editor_wme-network" --format "table {% raw %}{{.Name}}{% endraw %}\t{% raw %}{{.Driver}}{% endraw %}\t{% raw %}{{.Scope}}{% endraw %}"
     ```
 
     Ensure the output matches the following:

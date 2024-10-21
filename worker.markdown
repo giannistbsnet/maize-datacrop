@@ -73,7 +73,7 @@ Wait for the services to start, then run the following commands:
 - Check if the container is running (change `worker_name` with the actual name that you specified in the .env file):
 
     ```bash
-    docker ps --filter name=[worker_name] --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=[worker_name] --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:

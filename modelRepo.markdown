@@ -59,7 +59,7 @@ Wait for the services to start, then run the following commands:
 1. Check if the WME container is running:
 
     ```bash
-    docker ps --filter name=wme-container --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=wme-container --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:
@@ -72,7 +72,7 @@ Wait for the services to start, then run the following commands:
 2. Check if the MongoDB container is running:
 
     ```bash
-    docker ps --filter name=mongo --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=mongo --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:
