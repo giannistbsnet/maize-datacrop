@@ -6,7 +6,7 @@ permalink: /model-repo/
 nav_order: 4
 ---
 
-## DataCROP Maize Model Repository Deployment
+# DataCROP Maize Model Repository Deployment
 
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys the **DataCROP Model Repository infrastructure**, consisting of two containers.
 

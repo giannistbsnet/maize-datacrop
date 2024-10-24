@@ -6,7 +6,7 @@ permalink: /editor/
 nav_order: 5
 ---
 
-## DataCROP Maize Workflow Management Editor Deployment
+# DataCROP Maize Workflow Management Editor Deployment
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys the **DataCROP Workflow Management Engine** web application for creating and managing workflows. The deployment consists of a single container.
 
 
