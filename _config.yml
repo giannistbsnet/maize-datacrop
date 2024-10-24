@@ -27,8 +27,6 @@ url: "https://doc.datacrop.eu" # the base hostname & protocol for your site, e.g
 github_username:  giannistbsnet
 remote_theme: giannistbsnet/just-my-theme-doc@main
 
-baseurl: "" # should be empty for a custom domain at the root
-url: "https://doc.datacrop.eu" # your custom domain
 
 
 search_enabled: true
