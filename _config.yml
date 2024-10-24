@@ -22,11 +22,13 @@ title: DataCROP
 email: itampaki@netcompany.com
 description: >- # this means to ignore newlines until "baseurl:"
   DataCROP&(Data Collection Routing & Processing) is a Data collection framework which provides the specifications and relevant implementation to enable a real time data collection, transformation, filtering, and management service to facilitate data consumers (i.e., analytic algorithms). The framework can be applied in IoT environments supporting solutions in various domains (e.g., Industrial, Cybersecurity, etch.). For example, the solution may be used to collect security related data (e.g., network, system, solution proprietary, etch.) from monitored IoT systems and store them to detect patterns of abnormal behaviour by applying simple (i.e., filtering and pre-processing) or more elaborated mechanisms (i.e., AI algorithms). The design of the framework is driven by configurability, extensibility, dynamic setup, stream handling capabilities and Blockchain (Ledger) support. One of the key features of the framework is that it is detached from the underlying infrastructure by employing a specialized data model for modelling the solution’s Data Sources, Processors and Results which facilitates the data interoperability discoverability and configurability of the offered solution.
-baseurl: "/datacrop" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /datacrop
+url: "https://doc.datacrop.eu" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  giannistbsnet
 remote_theme: giannistbsnet/just-my-theme-doc@main
 
+baseurl: "" # should be empty for a custom domain at the root
+url: "https://doc.datacrop.eu" # your custom domain
 
 
 search_enabled: true
