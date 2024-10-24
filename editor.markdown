@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 4. Workflow Editor Setup
+title: 5. Workflow Editor Setup
 parent: Maize Setup
 permalink: /editor/
 nav_order: 5

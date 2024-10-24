@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2. Worker Setup
+title: 3. Worker Setup
 parent: Maize Setup
 permalink: /worker/
 nav_order: 3

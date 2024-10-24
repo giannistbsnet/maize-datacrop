@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 3. Model Repository Setup
+title: 4. Model Repository Setup
 parent: Maize Setup
 permalink: /model-repo/
 nav_order: 4

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "1. Airflow Setup"
+title: "2. Airflow Setup"
 parent: Maize Setup
 permalink: /airflow/
 nav_order: 2
