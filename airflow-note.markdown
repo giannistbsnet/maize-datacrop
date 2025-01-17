@@ -3,7 +3,7 @@ layout: page
 title: "4. Airflow"
 parent: User Guide
 permalink: /airflow-note/
-nav_order: 3
+nav_order: 4
 ---
 
 # Airflow
