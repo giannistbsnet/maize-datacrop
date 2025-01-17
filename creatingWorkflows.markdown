@@ -42,3 +42,9 @@ nav_order: 3
 - Assign **Data Input** and **Data Output** using digital resources.
 
 **Note**: Before creating a processor in the Flow Creator, ensure that you have already created the data models you plan to use with it. This includes the worker asset and the digital resources that will represent the data input and output you plan to add.
+
+**Basic Processor Types Supported**:
+- **Streamhandler**: Deploys a full Kafka cluster.
+- **Logstash**: Creates a pipeline that transfers data from one digital resource to another.
+- **Kibana**: Creates a Logstash pipeline that takes input from a digital resource and transfers it to Elasticsearch for visualization through the workflow editor.
+- **Logstash -> Observation**: Creates a Logstash pipeline that takes data from the input digital resource, converts it into an observation, and saves it in a predefined collection.
