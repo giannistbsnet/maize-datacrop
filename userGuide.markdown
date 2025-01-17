@@ -6,4 +6,10 @@ nav_order: 3
 ---
 
 # DataCROP Maize Workflow Management Engine User Guide
-![alt text](images/image.png)
+
+## Overview
+
+The Workflow Management Engine application is designed to facilitate efficient creation and management of workflows through two primary tabs in the sidebar: **Warehouse** and **Lab**. Each tab serves a distinct purpose within the application.
+
+- **Warehouse**: A repository for creating and managing the data models that are used in workflows.
+- **Lab**: A dedicated space for designing and configuring workflows, leveraging the data models from the Warehouse.
