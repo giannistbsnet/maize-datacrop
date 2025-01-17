@@ -40,3 +40,5 @@ nav_order: 3
 - Define the **Processor Type** and it's parameters.
 - Choose a **Worker** for deployment.
 - Assign **Data Input** and **Data Output** using digital resources.
+
+**Note**: Before creating a processor in the Flow Creator, ensure that you have already created the data models you plan to use with it. This includes the worker asset and the digital resources that will represent the data input and output you plan to add.
