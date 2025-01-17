@@ -18,6 +18,8 @@ nav_order: 2
 - **View Workflows**: Browse your existing workflows.
 - **Create Workflow**: Redirects you to the Lab tab for creating a new workflow.
 
+![Workflows Image](workflows.png)
+
 ### My Digital Resources
 
 **Description**: The Digital Resource entity represents the instantiation of a data source within the system.
@@ -30,6 +32,8 @@ nav_order: 2
 
 **Functionality**: Links physical or digital assets to their operational data within DataCROP.
 
+![DS Image](ds.png)
+
 ### My Workers
 
 **Description**: This section allows you to view and create worker assets.
@@ -39,6 +43,8 @@ nav_order: 2
 **Features**:
 - Define worker specifications.
 - Assign workers to processors for deployment.
+
+![Workers Image](workers.png)
 
 ### My Data Kinds
 
@@ -52,3 +58,5 @@ nav_order: 2
 - **quantityKind**: Defines whether the data is quantitative or qualitative.
 
 **Functionality**: Facilitates precise processing and analysis of data.
+
+![Datakind Image](datakind.png)

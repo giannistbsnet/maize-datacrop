@@ -16,6 +16,8 @@ nav_order: 3
 
 **Overview**: The starting point for creating workflows.
 
+![Workflow Specs Image](workflowspecs.png)
+
 **Workflow Specifications**:
 - **Name**  
 - **Description**  
@@ -24,6 +26,8 @@ nav_order: 3
 ### Flow Creator
 
 **Overview**: An interactive interface for designing workflows using nodes and edges.
+
+![Flow Creator Image](flowCreator.png)
 
 **Features**:
 - **Add Node**: Use the “Add Node” button to add processors to your workflow.
