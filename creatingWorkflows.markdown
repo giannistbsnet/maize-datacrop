@@ -12,7 +12,7 @@ nav_order: 3
 
 ### Creating Workflows
 
-![Workflow Specs Image](images/workflowspecs.png)
+![Workflow Specs Image](workflowspecs.png)
 
 #### Workflow Specifications Page
 
@@ -25,7 +25,7 @@ nav_order: 3
 
 ### Flow Creator
 
-![Flow Creator Image](images/flowCreator.png)
+![Flow Creator Image](flowCreator.png)
 
 **Overview**: An interactive interface for designing workflows using nodes and edges.
 
