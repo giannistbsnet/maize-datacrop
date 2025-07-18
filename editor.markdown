@@ -1,12 +1,12 @@
 ---
 layout: page
-title: 4. Workflow Editor Setup
+title: 5. Workflow Editor Setup
 parent: Maize Setup
 permalink: /editor/
 nav_order: 5
 ---
 
-## DataCROP Maize Workflow Management Editor Deployment
+# DataCROP Maize Workflow Management Editor Deployment
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys the **DataCROP Workflow Management Engine** web application for creating and managing workflows. The deployment consists of a single container.
 
 
@@ -50,7 +50,7 @@ Wait for the services to start, then run the following commands:
 1. Check if the container is running:
 
     ```bash
-    docker ps --filter name=wme-ui --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=wme-ui --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:
@@ -63,7 +63,7 @@ Wait for the services to start, then run the following commands:
 2. Check if the network is set up correctly:
 
     ```bash
-    docker network ls --filter name="maze-workflow-management-editor_wme-network" --format "table {{.Name}}\t{{.Driver}}\t{{.Scope}}"
+    docker network ls --filter name="maze-workflow-management-editor_wme-network" --format "table {% raw %}{{.Name}}{% endraw %}\t{% raw %}{{.Driver}}{% endraw %}\t{% raw %}{{.Scope}}{% endraw %}"
     ```
 
     Ensure the output matches the following:

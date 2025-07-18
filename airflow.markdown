@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "1. Airflow Setup"
+title: "2. Airflow Setup"
 parent: Maize Setup
 permalink: /airflow/
 nav_order: 2
@@ -55,19 +55,19 @@ Wait for the services to start, then run the following commands:
 - Check if the container is running (change `worker_name` with the actual name that you specified in the .env file):
 
     ```bash
-    docker ps --filter name=airflow_core --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=airflow --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:
 
     ```bash
     IMAGE                            NAMES
-    airflow_core-airflow-triggerer   airflow_core-airflow-triggerer-1
-    airflow_core-airflow-webserver   airflow_core-airflow-webserver-1
-    airflow_core-flower              airflow_core-flower-1
-    airflow_core-airflow-scheduler   airflow_core-airflow-scheduler-1
-    postgres:13                      airflow_core-postgres-1
-    redis:7.2                        airflow_core-redis-1
+    airflow-airflow-triggerer        airflow-airflow-triggerer-1
+    airflow-airflow-webserver        airflow-airflow-webserver-1
+    airflow-flower                   airflow-flower-1
+    airflow-airflow-scheduler        airflow-airflow-scheduler-1
+    postgres:13                      airflow-postgres-1
+    redis:7.2                        airflow-redis-1
     ```
 
 

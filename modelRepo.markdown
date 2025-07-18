@@ -1,12 +1,12 @@
 ---
 layout: page
-title: 3. Model Repository Setup
+title: 4. Model Repository Setup
 parent: Maize Setup
 permalink: /model-repo/
 nav_order: 4
 ---
 
-## DataCROP Maize Model Repository Deployment
+# DataCROP Maize Model Repository Deployment
 
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys the **DataCROP Model Repository infrastructure**, consisting of two containers.
 
@@ -59,7 +59,7 @@ Wait for the services to start, then run the following commands:
 1. Check if the WME container is running:
 
     ```bash
-    docker ps --filter name=wme-container --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=wme-container --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:
@@ -72,7 +72,7 @@ Wait for the services to start, then run the following commands:
 2. Check if the MongoDB container is running:
 
     ```bash
-    docker ps --filter name=mongo --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=mongo --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:

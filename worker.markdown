@@ -1,12 +1,12 @@
 ---
 layout: page
-title: 2. Worker Setup
+title: 3. Worker Setup
 parent: Maize Setup
 permalink: /worker/
 nav_order: 3
 ---
 
-## DataCROP Maize Processing Engine Worker Deployment
+# DataCROP Maize Processing Engine Worker Deployment
 
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys a Worker responsible for handling tasks within the **DataCROP Workflow Management Engine**. The deployment consists of a single container.
 
@@ -73,7 +73,7 @@ Wait for the services to start, then run the following commands:
 - Check if the container is running (change `worker_name` with the actual name that you specified in the .env file):
 
     ```bash
-    docker ps --filter name=[worker_name] --format "table {{.Image}}\t{{.Names}}"
+    docker ps --filter name=[worker_name] --format "table {% raw %}{{.Image}}{% endraw %}\t{% raw %}{{.Names}}{% endraw %}"
     ```
 
     You should see the following output:
