@@ -12,20 +12,24 @@ This is a demo deployment instance for the **Maize DataCROP version**. It deploy
 
 ### Prerequisites
 
-Before proceeding, ensure you have completed the setup instructions for the [Maize Model Repository](https://github.com/datacrop/maize-model-repository). 
+Before proceeding, ensure you have completed the setup instructions for the [Maize Model Repository](https://github.com/datacrop/maize-model-repository).
 
-After completing the setup, follow these steps:
+After completing the setup, follow these steps to configure your environment variables:
 
-1. Navigate to the [`.env`](./ui/.env) file in the ui directory.
-2. Update the file with the correct IP address of the host used for the model repository infrastructure by filling in the following parameters:
+1. Navigate to the [`.env`](./ui/.env) file in the `ui` directory.
+2. Update the file with the correct values for your infrastructure by filling in the following parameters:
 
     ```plaintext
     VITE_API_URL=http://<YOUR_HOST_IP>:9090
     VITE_BACKEND_IP=<YOUR_HOST_IP>
     VITE_AIRFLOW_IP=<YOUR_HOST_IP>
+    VITE_KEYCLOAK_URL=<YOUR_KEYCLOAK_URL>
+    VITE_KEYCLOAK_REALM=<YOUR_KEYCLOAK_REALM>
+    VITE_KEYCLOAK_CLIENT_ID=<YOUR_KEYCLOAK_CLIENT_ID>
     ```
 
-   Replace `<YOUR_HOST_IP>` with the actual IP address of the machine hosting your Maize Model Repository infrastructure.
+   Replace `<YOUR_HOST_IP>`, `<YOUR_KEYCLOAK_URL>`, `<YOUR_KEYCLOAK_REALM>`, and `<YOUR_KEYCLOAK_CLIENT_ID>` with the actual values for your Maize Model Repository and Keycloak infrastructure. Example values:
+
 
 Once these parameters are correctly set, you can proceed with the deployment.
 
