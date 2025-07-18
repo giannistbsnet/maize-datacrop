@@ -22,23 +22,56 @@ The DataCROP Maize Airflow Processing Engine is a critical component of the Data
 
 Before proceeding with the deployment, make sure to complete the following steps:
 
-1. **Update Configuration Files**:
-   - **`.env` File**: 
-     - Navigate to the [.env](.env) file and update the following parameters:
-       - `HOST_IP`: Set this to the IP address of the host machine where the Airflow infrastructure is deployed.
-       - `CELERY_WEB_UNAME`: Set this to your desired username for accessing the Celery Flower dashboard.
-       - `CELERY_WEB_PSSWD`: Set this to your desired password for the Celery Flower dashboard.
-   
-   - **Docker Compose File**:
-     - Navigate to the [docker-compose.yml](docker-compose.yaml) file and update the following:
-       - In the `extra_hosts` section, change the IP address of `remote_worker01` to the IP address of your remote worker machine.
-       - If your worker has a different name, replace `remote_worker01` with the correct name of your worker.
+After completing the setup, follow these steps to configure your environment variables:
 
-2. **SSH Configuration**: 
-   - Ensure that SSH keys are generated on all machines that are part of this infrastructure.
-   - Add the SSH keys from each machine to the `authorized_keys` file on all other machines in the infrastructure to allow passwordless SSH access.
+1. Navigate to the [`.env` file](.env) and ensure that all necessary environment variables are set correctly for your deployment. Update the file with the correct values for your infrastructure by filling in the following parameters:
 
-Once these steps are completed, you can proceed with the deployment process.
+    ```plaintext
+    # AIRFLOW USERS     ||  DC.C
+    AIRFLOW_UID=<YOUR_AIRFLOW_UID>
+    DOCKER_GID=<YOUR_DOCKER_GID>
+    AIRFLOW_WEB_PORT=<YOUR_AIRFLOW_WEB_PORT>
+    AIRFLOW_WWW_UNAME_USERNAME=<YOUR_AIRFLOW_WWW_UNAME_USERNAME>
+    AIRFLOW_WEB_PSSWD=<YOUR_AIRFLOW_WEB_PSSWD>
+    AIRFLOW_WEB_SSL_CERT=<YOUR_AIRFLOW_WEB_SSL_CERT>
+    AIRFLOW_WEB_SSL_KEY=<YOUR_AIRFLOW_WEB_SSL_KEY>
+    AIRFLOW_CA_CERT=<YOUR_AIRFLOW_CA_CERT>
+    AIRFLOW_WEB_SECRET_KEY=<YOUR_AIRFLOW_WEB_SECRET_KEY>
+    AIRFLOW_FERNET_KEY=<YOUR_AIRFLOW_FERNET_KEY>
+
+    # HOST              ||  DC.C
+    HOST_IP=<YOUR_HOST_IP>
+    # WORKER_NAME=<YOUR_WORKER_NAME>
+
+    # REDIS             ||  DC.C
+    REDIS_TLS_PORT=<YOUR_REDIS_TLS_PORT>
+    REDIS_TLS_CERT_FILE=<YOUR_REDIS_TLS_CERT_FILE>
+    REDIS_TLS_KEY_FILE=<YOUR_REDIS_TLS_KEY_FILE>
+    REDIS_TLS_CA_CERT_FILE=<YOUR_REDIS_TLS_CA_CERT_FILE>
+    REDIS_TLS_CLIENT_CERT_FILE=<YOUR_REDIS_TLS_CLIENT_CERT_FILE>
+    REDIS_TLS_CLIENT_KEY_FILE=<YOUR_REDIS_TLS_CLIENT_KEY_FILE>
+
+    # POSTGRES          ||  DC.C
+    POSTGRES_PORT=<YOUR_POSTGRES_PORT>
+    POSTGRES_SSL_CERT_FILE=<YOUR_POSTGRES_SSL_CERT_FILE>
+    POSTGRES_SSL_KEY_FILE=<YOUR_POSTGRES_SSL_KEY_FILE>
+    POSTGRES_SSL_CA_FILE=<YOUR_POSTGRES_SSL_CA_FILE>
+
+    # Celery            ||  DC.C
+    CELERY_WEB_UNAME=<YOUR_CELERY_WEB_UNAME>
+    CELERY_WEB_PSSWD=<YOUR_CELERY_WEB_PSSWD>
+    CELERY_FLOWER_PORT=<YOUR_CELERY_FLOWER_PORT>
+    CELERY_FLOWER_CERT=<YOUR_CELERY_FLOWER_CERT>
+    CELERY_FLOWER_KEY=<YOUR_CELERY_FLOWER_KEY>
+    CELERY_FLOWER_CA_CERT=<YOUR_CELERY_FLOWER_CA_CERT>
+
+    REMOTE_WORKER_NAME=<YOUR_REMOTE_WORKER_NAME>
+    REMOTE_WORKER_IP=<YOUR_REMOTE_WORKER_IP>
+    ```
+
+   Replace all placeholder values (e.g., `<YOUR_AIRFLOW_UID>`, `<YOUR_HOST_IP>`, etc.) with the actual values for your infrastructure. 
+
+Once these parameters are correctly set, you can proceed with the deployment.
 ### Start The Application.
 
 1. Navigate to the source directory containing the `docker-compose.yml` file.
