@@ -42,18 +42,60 @@ The following directories are mounted into the Airflow worker container to persi
 
 Before proceeding, ensure that you have followed the setup instructions for the [airflow processing engine](https://github.com/datacrop/maze-processing-engine-airflow).
 
-1. Clone the repository and navigate to the [`.env` file](.env) and ensure that all necessary environment variables are set correctly for your deployment. The most important variables to update are:
-   - `WORKER_NAME`: The display name of your worker.
-   - `AIRFLOW_IP`: The IP address of the host running Airflow.
-   - `HOST_IP`: The IP address of the host machine.
+After completing the setup, follow these steps to configure your environment variables:
 
-   Make sure to review and adjust any other variables in the `.env` file based on your specific setup.
+1. Navigate to the [`.env` file](.env) and ensure that all necessary environment variables are set correctly for your deployment. Update the file with the correct values for your infrastructure by filling in the following parameters:
 
-2. Open the `docker-compose.yml` file and locate the **airflow-worker** section. Under the `extra_hosts` field, update the following IP addresses:
-   - **Redis**: Set the correct IP address for your Redis instance.
-   - **PostgreSQL**: Set the correct IP address for your PostgreSQL database.
+    ```plaintext
+    # HOST              ||  DC.C
+    AIRFLOW_IP=<YOUR_AIRFLOW_IP>
+    AIRFLOW_WEB_SECRET_KEY=<YOUR_AIRFLOW_WEB_SECRET_KEY>
+    AIRFLOW_FERNET_KEY=<YOUR_AIRFLOW_FERNET_KEY>
+    HOST_IP=<YOUR_HOST_IP>
 
-   These changes are necessary to ensure proper communication between the Airflow worker, Redis, and PostgreSQL services.
+    # WORKER            ||  DC.W
+    WORKER_NAME=<YOUR_WORKER_NAME>
+    WORKER_SSL_KEY_FILE=<YOUR_WORKER_SSL_KEY_FILE>
+    WORKER_SSL_CERT_FILE=<YOUR_WORKER_SSL_CERT_FILE>
+    WORKER_SSL_CERT_STORE=<YOUR_WORKER_SSL_CERT_STORE>
+
+    # REDIS             ||  DC.C
+    REDIS_TLS_PORT=<YOUR_REDIS_TLS_PORT>
+    REDIS_TLS_CERT_FILE=<YOUR_REDIS_TLS_CERT_FILE>
+    REDIS_TLS_KEY_FILE=<YOUR_REDIS_TLS_KEY_FILE>
+    REDIS_TLS_CA_CERT_FILE=<YOUR_REDIS_TLS_CA_CERT_FILE>
+    REDIS_TLS_CLIENT_CERT_FILE=<YOUR_REDIS_TLS_CLIENT_CERT_FILE>
+    REDIS_TLS_CLIENT_KEY_FILE=<YOUR_REDIS_TLS_CLIENT_KEY_FILE>
+    REDIS_IP=<YOUR_REDIS_IP>
+
+    POSTGRES_IP=<YOUR_POSTGRES_IP>
+
+    # ARTIFACTORY       ||  CONFIG
+    ARTIFACTORY_HOST=<YOUR_ARTIFACTORY_HOST>
+    ARTIFACTORY_REGISTRY=<YOUR_ARTIFACTORY_REGISTRY>
+    ARTIFACTORY_USER=<YOUR_ARTIFACTORY_USER>
+    ARTIFACTORY_PSSWD=<YOUR_ARTIFACTORY_PSSWD>
+
+    # Elastic           ||  CONFIG
+    ELASTIC_HOST=<YOUR_ELASTIC_HOST>
+    ELASTIC_PORT=<YOUR_ELASTIC_PORT>
+    INDEX=<YOUR_INDEX>
+
+    # KAFKA             ||  CONFIG
+    KAFKA_TOPIC=<YOUR_KAFKA_TOPIC>
+    KAFKA_BROKER=<YOUR_KAFKA_BROKER>
+    KAFKA_CONSUMER_GROUP=<YOUR_KAFKA_CONSUMER_GROUP>
+
+    # TENSORBOARD       ||  CONFIG
+    TB_LOGS_PATH=<YOUR_TB_LOGS_PATH>
+
+    # MODULES LIB
+    MODULES_LIB_PATH=<YOUR_MODULES_LIB_PATH>
+    ```
+
+   Replace all placeholder values (e.g., `<YOUR_AIRFLOW_IP>`, `<YOUR_WORKER_NAME>`, etc.) with the actual values for your infrastructure.
+
+Once these parameters are correctly set, you can proceed with the deployment.
 
 
 ### Start The Application.
