@@ -49,6 +49,10 @@ just_the_docs:
     content:
       name: Content
   footer_content: "&copy; 2025 DataCROP"
+  aux_links:
+    DataCROP GitHub:
+      url: https://github.com/datacrop
+      external: true
 
 plugins:
   - jekyll-default-layout
