@@ -32,6 +32,23 @@ remote_theme: giannistbsnet/just-my-theme-doc@main
 
 search_enabled: true
 
+collections:
+  content:
+    output: true
+    permalink: /:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: content
+    values:
+      layout: page
+
+just_the_docs:
+  collections:
+    content:
+      name: Content
+
 plugins:
   - jekyll-default-layout
   - jekyll-remote-theme
