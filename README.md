@@ -5,9 +5,9 @@
 ### Static Site Generation
 ![Jekyll](https://img.shields.io/badge/Jekyll-4.3+-CC0000?style=for-the-badge&logo=jekyll&logoColor=white)
 ![Just the Docs](https://img.shields.io/badge/Theme-Just_the_Docs-0D2538?style=for-the-badge)
+![Ruby](https://img.shields.io/badge/Ruby-3.3+-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 
 ### Language & Tooling
-![Ruby](https://img.shields.io/badge/Ruby-3.3+-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
 ![Vue.js](https://img.shields.io/badge/Frontend-Vue.js-42b883?style=for-the-badge&logo=vuedotjs&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Backend-Spring_Boot-6db33f?style=for-the-badge&logo=springboot&logoColor=white)
 
@@ -17,8 +17,6 @@
 ![ELK Stack](https://img.shields.io/badge/Observability-ELK_Stack-005571?style=for-the-badge&logo=elasticstack&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB-47a248?style=for-the-badge&logo=mongodb&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/Messaging-RabbitMQ-ff6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
-![Node.js](https://img.shields.io/badge/Runtime-Node.js-43853d?style=for-the-badge&logo=node.js&logoColor=white)
-![React](https://img.shields.io/badge/UI-React-20232a?style=for-the-badge&logo=react&logoColor=61dafb)
 ![Keycloak](https://img.shields.io/badge/Identity-Keycloak-32404b?style=for-the-badge&logo=keycloak&logoColor=white)
 
 ### CI/CD & Hosting
