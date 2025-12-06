@@ -17,18 +17,20 @@ Before proceeding, ensure you have completed the setup instructions for the [Mai
 After completing the setup, follow these steps to configure your environment variables:
 
 1. Navigate to the [`.env`](./ui/.env) file in the `ui` directory.
-2. Update the file with the correct values for your infrastructure by filling in the following parameters:
+2. Update the file with the correct values for your infrastructure. Current values from `maze-workflow-management-editor/.env` are:
 
     ```plaintext
-    VITE_API_URL=http://<YOUR_HOST_IP>:9090
-    VITE_BACKEND_IP=<YOUR_HOST_IP>
-    VITE_AIRFLOW_IP=<YOUR_HOST_IP>
-    VITE_KEYCLOAK_URL=<YOUR_KEYCLOAK_URL>
-    VITE_KEYCLOAK_REALM=<YOUR_KEYCLOAK_REALM>
-    VITE_KEYCLOAK_CLIENT_ID=<YOUR_KEYCLOAK_CLIENT_ID>
+    VITE_API_URL=http://167.235.128.77:9090
+    VITE_BACKEND_IP=167.235.128.77
+    VITE_AIRFLOW_IP=167.235.128.77
+    VITE_KEYCLOAK_URL=https://keycloak.modul4r.rid-intrasoft.eu/
+    VITE_KEYCLOAK_REALM=MODUL4R-Platform
+    VITE_KEYCLOAK_CLIENT_ID=modul4r-front
+    VITE_PROJECT_NAME=MODUL4R
+    VITE_DEFAULT_PRIMARY_COLOR=#DA3333
     ```
 
-   Replace `<YOUR_HOST_IP>`, `<YOUR_KEYCLOAK_URL>`, `<YOUR_KEYCLOAK_REALM>`, and `<YOUR_KEYCLOAK_CLIENT_ID>` with the actual values for your Maize Model Repository and Keycloak infrastructure. Example values:
+   Adjust the above values only if your deployment differs (e.g., different host IP or Keycloak realm). No secrets are stored in this file.
 
 
 Once these parameters are correctly set, you can proceed with the deployment.

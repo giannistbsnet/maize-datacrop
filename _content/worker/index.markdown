@@ -44,56 +44,41 @@ Before proceeding, ensure that you have followed the setup instructions for the 
 
 After completing the setup, follow these steps to configure your environment variables:
 
-1. Navigate to the [`.env` file](.env) and ensure that all necessary environment variables are set correctly for your deployment. Update the file with the correct values for your infrastructure by filling in the following parameters:
+1. Navigate to the [`.env` file](.env) and ensure that all necessary environment variables are set correctly for your deployment. Current values from `maze-processing-engine-worker/.env` are shown below; sensitive secrets are redacted—keep using the real values already present in your `.env`.
 
     ```plaintext
     # HOST              ||  DC.C
-    AIRFLOW_IP=<YOUR_AIRFLOW_IP>
-    AIRFLOW_WEB_SECRET_KEY=<YOUR_AIRFLOW_WEB_SECRET_KEY>
-    AIRFLOW_FERNET_KEY=<YOUR_AIRFLOW_FERNET_KEY>
-    HOST_IP=<YOUR_HOST_IP>
+    AIRFLOW_IP=167.235.128.77
+    AIRFLOW_WEB_SECRET_KEY=[REDACTED – keep existing value in your .env]
+    AIRFLOW_FERNET_KEY=[REDACTED – keep existing value in your .env]
+    HOST_IP=167.235.128.77
+    _PIP_ADDITIONAL_REQUIREMENTS=''
+    AIRFLOW_UID=1002
+    AIRFLOW_GID=0
 
     # WORKER            ||  DC.W
-    WORKER_NAME=<YOUR_WORKER_NAME>
-    WORKER_SSL_KEY_FILE=<YOUR_WORKER_SSL_KEY_FILE>
-    WORKER_SSL_CERT_FILE=<YOUR_WORKER_SSL_CERT_FILE>
-    WORKER_SSL_CERT_STORE=<YOUR_WORKER_SSL_CERT_STORE>
+    WORKER_NAME=remote_worker01
+    WORKER_SSL_KEY_FILE=/security/${WORKER_NAME}/${WORKER_NAME}-key.pem
+    WORKER_SSL_CERT_FILE=/security/${WORKER_NAME}/${WORKER_NAME}.pem
+    WORKER_SSL_CERT_STORE=/security/ca/rootCA.pem
+
+    # Please check the GID of the docker group on the host
+    DOCKER_GID=988
 
     # REDIS             ||  DC.C
-    REDIS_TLS_PORT=<YOUR_REDIS_TLS_PORT>
-    REDIS_TLS_CERT_FILE=<YOUR_REDIS_TLS_CERT_FILE>
-    REDIS_TLS_KEY_FILE=<YOUR_REDIS_TLS_KEY_FILE>
-    REDIS_TLS_CA_CERT_FILE=<YOUR_REDIS_TLS_CA_CERT_FILE>
-    REDIS_TLS_CLIENT_CERT_FILE=<YOUR_REDIS_TLS_CLIENT_CERT_FILE>
-    REDIS_TLS_CLIENT_KEY_FILE=<YOUR_REDIS_TLS_CLIENT_KEY_FILE>
-    REDIS_IP=<YOUR_REDIS_IP>
+    REDIS_TLS_PORT=6379
+    REDIS_TLS_CERT_FILE=/security/redis/redis.pem
+    REDIS_TLS_KEY_FILE=/security/redis/redis-key.pem
+    REDIS_TLS_CA_CERT_FILE=/security/ca/rootCA.pem
+    REDIS_TLS_CLIENT_CERT_FILE=/security/redis/redis-client.pem
+    REDIS_TLS_CLIENT_KEY_FILE=/security/redis/redis-client-key.pem
 
-    POSTGRES_IP=<YOUR_POSTGRES_IP>
-
-    # ARTIFACTORY       ||  CONFIG
-    ARTIFACTORY_HOST=<YOUR_ARTIFACTORY_HOST>
-    ARTIFACTORY_REGISTRY=<YOUR_ARTIFACTORY_REGISTRY>
-    ARTIFACTORY_USER=<YOUR_ARTIFACTORY_USER>
-    ARTIFACTORY_PSSWD=<YOUR_ARTIFACTORY_PSSWD>
-
-    # Elastic           ||  CONFIG
-    ELASTIC_HOST=<YOUR_ELASTIC_HOST>
-    ELASTIC_PORT=<YOUR_ELASTIC_PORT>
-    INDEX=<YOUR_INDEX>
-
-    # KAFKA             ||  CONFIG
-    KAFKA_TOPIC=<YOUR_KAFKA_TOPIC>
-    KAFKA_BROKER=<YOUR_KAFKA_BROKER>
-    KAFKA_CONSUMER_GROUP=<YOUR_KAFKA_CONSUMER_GROUP>
-
-    # TENSORBOARD       ||  CONFIG
-    TB_LOGS_PATH=<YOUR_TB_LOGS_PATH>
-
-    # MODULES LIB
-    MODULES_LIB_PATH=<YOUR_MODULES_LIB_PATH>
+    # CELERY            ||  DC.C
+    CELERY_WEB_UNAME=[REDACTED – keep existing value in your .env]
+    CELERY_WEB_PSSWD=[REDACTED – keep existing value in your .env]
     ```
 
-   Replace all placeholder values (e.g., `<YOUR_AIRFLOW_IP>`, `<YOUR_WORKER_NAME>`, etc.) with the actual values for your infrastructure.
+   Adjust only if your deployment differs (e.g., different IPs or worker name); do not publish or rotate the redacted secrets already set in your `.env`.
 
 Once these parameters are correctly set, you can proceed with the deployment.
 

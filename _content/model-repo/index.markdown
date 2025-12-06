@@ -25,60 +25,70 @@ Before proceeding, make sure you have completed the following steps:
 After completing the setup, follow these steps to configure your environment variables:
 
 1. Navigate to your environment variable file (e.g., `.env` or the relevant configuration file for your deployment).
-2. Update the file with the correct values for your infrastructure by filling in the following parameters:
+2. Update the file with the correct values for your infrastructure. Below are the current values from `maize-model-repository/.env` and `docker-compose.yml`; sensitive secrets are redacted—keep using the real values already present in your `.env`.
 
     ```plaintext
-    # MongoDB
-    MONGO_INITDB_ROOT_USERNAME=<YOUR_MONGO_ROOT_USERNAME>
-    MONGO_INITDB_ROOT_PASSWORD=<YOUR_MONGO_ROOT_PASSWORD>
-
     # Application
-    SERVER_PORT=<YOUR_SERVER_PORT>
-
-    # File size limits
-    MAX_FILE_SIZE=<YOUR_MAX_FILE_SIZE>
-    MAX_REQUEST_SIZE=<YOUR_MAX_REQUEST_SIZE>
+    SERVER_PORT=9090
+    MAX_FILE_SIZE=200MB
+    MAX_REQUEST_SIZE=500MB
 
     # Workflow Management Engine
-    DAGS_FOLDER=<YOUR_DAGS_FOLDER>
-    VM_WME_IP=<YOUR_WME_IP>
-    VM_WORKER_IP=<YOUR_WORKER_IP>
-    REMOTE_HOST_WME=<YOUR_REMOTE_HOST_WME>
-    REMOTE_HOST_WORKER=<YOUR_REMOTE_HOST_WORKER>
-    WEBSERVER_DAGS_FOLDER=<YOUR_WEBSERVER_DAGS_FOLDER>
-    WORKER_DAGS_FOLDER=<YOUR_WORKER_DAGS_FOLDER>
+    VM_WME_IP=167.235.128.77
+    VM_WORKER_IP=167.235.128.77
+    WEBSERVER_DAGS_FOLDER=/home/itampaki/maze-processing-engine-airflow/dags
+    WORKER_API_PORT=8090
 
     # Harbor
-    HARBOR_URL=<YOUR_HARBOR_URL>
-    HARBOR_USERNAME=<YOUR_HARBOR_USERNAME>
-    HARBOR_TOKEN=<YOUR_HARBOR_TOKEN>
+    HARBOR_URL=harbor.modul4r.rid-intrasoft.eu/
+    HARBOR_USERNAME=giannistbsnet
+    HARBOR_TOKEN=[REDACTED – keep existing value in your .env]
 
     # MongoDB
-    MONGO_USERNAME=<YOUR_MONGO_USERNAME>
-    MONGO_PASSWORD=<YOUR_MONGO_PASSWORD>
-    MONGO_DATABASE=<YOUR_MONGO_DATABASE>
-    MONGO_PORT=<YOUR_MONGO_PORT>
-    MONGO_HOST=<YOUR_MONGO_HOST>
+    MONGO_INITDB_ROOT_USERNAME=root
+    MONGO_INITDB_ROOT_PASSWORD=[REDACTED – keep existing value in your .env]
+    MONGO_USERNAME=root
+    MONGO_PASSWORD=[REDACTED – keep existing value in your .env]
+    MONGO_DATABASE=registry
+    MONGO_PORT=27017
+    MONGO_HOST=167.235.128.77
 
     # Kafka
-    KAFKA_BOOTSTRAP_SERVERS=<YOUR_KAFKA_BOOTSTRAP_SERVERS>
+    KAFKA_ENABLED=false
+    KAFKA_BOOTSTRAP_SERVERS=167.235.128.77:9092
 
     # Logstash
-    LOGSTASH_CONFIG_FOLDER=<YOUR_LOGSTASH_CONFIG_FOLDER>
-    LOGSTASH_PIPELINE_FOLDER=<YOUR_LOGSTASH_PIPELINE_FOLDER>
+    LOGSTASH_CONFIG_FOLDER=/app/logstash/config/
+    LOGSTASH_PIPELINE_FOLDER=/app/logstash/pipeline/
 
     # Keycloak
-    KEYCLOAK_ISSUER_URI=<YOUR_KEYCLOAK_ISSUER_URI>
-    KEYCLOAK_PROVIDER=<YOUR_KEYCLOAK_PROVIDER>
-    KEYCLOAK_CLIENT_NAME=<YOUR_KEYCLOAK_CLIENT_NAME>
-    KEYCLOAK_CLIENT_ID=<YOUR_KEYCLOAK_CLIENT_ID>
-    KEYCLOAK_CLIENT_SECRET=<YOUR_KEYCLOAK_CLIENT_SECRET>
-    KEYCLOAK_SCOPE=<YOUR_KEYCLOAK_SCOPE>
-    KEYCLOAK_USER_NAME_ATTR=<YOUR_KEYCLOAK_USER_NAME_ATTR>
-    KEYCLOAK_JWK_SET_URI=<YOUR_KEYCLOAK_JWK_SET_URI>
+    KEYCLOAK_ISSUER_URI=https://keycloak.modul4r.rid-intrasoft.eu/realms/MODUL4R-Platform
+    KEYCLOAK_PROVIDER=MODUL4R-Platform
+    KEYCLOAK_CLIENT_NAME=modul4r-back
+    KEYCLOAK_CLIENT_ID=modul4r-back
+    KEYCLOAK_CLIENT_SECRET=[REDACTED – keep existing value in your .env]
+    KEYCLOAK_SCOPE=openid,offline_access,profile,roles
+    KEYCLOAK_USER_NAME_ATTR=preferred_username
+    KEYCLOAK_JWK_SET_URI=https://keycloak.modul4r.rid-intrasoft.eu/realms/MODUL4R-Platform/protocol/openid-connect/certs
+
+    # Elastic Stack
+    ELASTIC_VERSION=8.15.3
+    ELASTIC_PASSWORD=[REDACTED – keep existing value in your .env]
+    LOGSTASH_INTERNAL_PASSWORD=[REDACTED – keep existing value in your .env]
+    KIBANA_SYSTEM_PASSWORD=[REDACTED – keep existing value in your .env]
+    METRICBEAT_INTERNAL_PASSWORD=[REDACTED – keep existing value in your .env]
+    FILEBEAT_INTERNAL_PASSWORD=[REDACTED – keep existing value in your .env]
+    HEARTBEAT_INTERNAL_PASSWORD=[REDACTED – keep existing value in your .env]
+    MONITORING_INTERNAL_PASSWORD=[REDACTED – keep existing value in your .env]
+    BEATS_SYSTEM_PASSWORD=[REDACTED – keep existing value in your .env]
+
+    # Airflow (WME integration)
+    AIRFLOW_BASE_URL=http://167.235.128.77:8080/api/v1
+    AIRFLOW_USERNAME=airflow
+    AIRFLOW_PASSWORD=[REDACTED – keep existing value in your .env]
     ```
 
-   Replace all placeholder values (e.g., `<YOUR_MONGO_ROOT_USERNAME>`, `<YOUR_WME_IP>`, etc.) with the actual values for your infrastructure. Example values:
+   Sensitive secrets are redacted above; ensure your `.env` retains the real values currently configured.
 
 Once these parameters are correctly set, you can proceed with the deployment.
 
