@@ -36,12 +36,12 @@ After completing the setup, follow these steps to configure your environment var
     # Workflow Management Engine
     VM_WME_IP=<YOUR_IP>
     VM_WORKER_IP=<YOUR_IP>
-    WEBSERVER_DAGS_FOLDER=/home/itampaki/maze-processing-engine-airflow/dags
+    WEBSERVER_DAGS_FOLDER=/path/to/maze-processing-engine-airflow/dags
     WORKER_API_PORT=8090
 
     # Harbor
-    HARBOR_URL=harbor.modul4r.rid-intrasoft.eu/
-    HARBOR_USERNAME=giannistbsnet
+    HARBOR_URL=harbor.example.com/
+    HARBOR_USERNAME=<HARBOR_USERNAME>
     HARBOR_TOKEN=[REDACTED – keep existing value in your .env]
 
     # MongoDB
@@ -51,25 +51,25 @@ After completing the setup, follow these steps to configure your environment var
     MONGO_PASSWORD=[REDACTED – keep existing value in your .env]
     MONGO_DATABASE=registry
     MONGO_PORT=27017
-    MONGO_HOST=167.235.128.77
+    MONGO_HOST=<MONGO_HOST>
 
     # Kafka
     KAFKA_ENABLED=false
-    KAFKA_BOOTSTRAP_SERVERS=167.235.128.77:9092
+    KAFKA_BOOTSTRAP_SERVERS=<KAFKA_BOOTSTRAP_SERVERS>
 
     # Logstash
     LOGSTASH_CONFIG_FOLDER=/app/logstash/config/
     LOGSTASH_PIPELINE_FOLDER=/app/logstash/pipeline/
 
     # Keycloak
-    KEYCLOAK_ISSUER_URI=https://keycloak.modul4r.rid-intrasoft.eu/realms/MODUL4R-Platform
-    KEYCLOAK_PROVIDER=MODUL4R-Platform
-    KEYCLOAK_CLIENT_NAME=modul4r-back
-    KEYCLOAK_CLIENT_ID=modul4r-back
+    KEYCLOAK_ISSUER_URI=https://keycloak.example.com/realms/YOUR-REALM
+    KEYCLOAK_PROVIDER=<KEYCLOAK_PROVIDER>
+    KEYCLOAK_CLIENT_NAME=<KEYCLOAK_CLIENT_NAME>
+    KEYCLOAK_CLIENT_ID=<KEYCLOAK_CLIENT_ID>
     KEYCLOAK_CLIENT_SECRET=[REDACTED – keep existing value in your .env]
     KEYCLOAK_SCOPE=openid,offline_access,profile,roles
     KEYCLOAK_USER_NAME_ATTR=preferred_username
-    KEYCLOAK_JWK_SET_URI=https://keycloak.modul4r.rid-intrasoft.eu/realms/MODUL4R-Platform/protocol/openid-connect/certs
+    KEYCLOAK_JWK_SET_URI=https://keycloak.example.com/realms/YOUR-REALM/protocol/openid-connect/certs
 
     # Elastic Stack
     ELASTIC_VERSION=8.15.3
@@ -83,8 +83,8 @@ After completing the setup, follow these steps to configure your environment var
     BEATS_SYSTEM_PASSWORD=[REDACTED – keep existing value in your .env]
 
     # Airflow (WME integration)
-    AIRFLOW_BASE_URL=http://167.235.128.77:8080/api/v1
-    AIRFLOW_USERNAME=airflow
+    AIRFLOW_BASE_URL=http://<AIRFLOW_HOST>:8080/api/v1
+    AIRFLOW_USERNAME=<AIRFLOW_USERNAME>
     AIRFLOW_PASSWORD=[REDACTED – keep existing value in your .env]
     ```
 

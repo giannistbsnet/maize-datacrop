@@ -48,16 +48,16 @@ After completing the setup, follow these steps to configure your environment var
 
     ```plaintext
     # HOST              ||  DC.C
-    AIRFLOW_IP=167.235.128.77
+    AIRFLOW_IP=<AIRFLOW_HOST_IP>
     AIRFLOW_WEB_SECRET_KEY=[REDACTED – keep existing value in your .env]
     AIRFLOW_FERNET_KEY=[REDACTED – keep existing value in your .env]
-    HOST_IP=167.235.128.77
+    HOST_IP=<WORKER_HOST_IP>
     _PIP_ADDITIONAL_REQUIREMENTS=''
     AIRFLOW_UID=1002
     AIRFLOW_GID=0
 
     # WORKER            ||  DC.W
-    WORKER_NAME=remote_worker01
+    WORKER_NAME=<WORKER_NAME>
     WORKER_SSL_KEY_FILE=/security/${WORKER_NAME}/${WORKER_NAME}-key.pem
     WORKER_SSL_CERT_FILE=/security/${WORKER_NAME}/${WORKER_NAME}.pem
     WORKER_SSL_CERT_STORE=/security/ca/rootCA.pem

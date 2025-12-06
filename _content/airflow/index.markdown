@@ -40,7 +40,7 @@ After completing the setup, follow these steps to configure your environment var
     AIRFLOW_FERNET_KEY=[REDACTED – keep existing value in your .env]
 
     # HOST              ||  DC.C
-    HOST_IP=167.235.128.77
+    HOST_IP=<HOST_IP>
     # WORKER_NAME=worker01
 
     # REDIS             ||  DC.C
@@ -65,8 +65,8 @@ After completing the setup, follow these steps to configure your environment var
     CELERY_FLOWER_KEY=/security/flower/flower-key.pem
     CELERY_FLOWER_CA_CERT=/security/ca/rootCA.pem
 
-    REMOTE_WORKER_NAME=remote_worker01
-    REMOTE_WORKER_IP=167.235.128.77
+    REMOTE_WORKER_NAME=<REMOTE_WORKER_NAME>
+    REMOTE_WORKER_IP=<REMOTE_WORKER_IP>
     ```
 
    Sensitive secrets are redacted above; ensure your `.env` retains the real values currently configured.
