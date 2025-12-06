@@ -8,7 +8,7 @@ nav_order: 4
 
 # Airflow
 
-![Airflow Screenshot](airflow.png)
+![Airflow Screenshot](/assets/img/airflow-note/airflow.png)
 
 For all the workflows we create, two DAGs (Directed Acyclic Graphs) are generated in Airflow:
 - **Deployment DAG**: Responsible for deploying all the processors in the workflow.

@@ -18,7 +18,7 @@ nav_order: 2
 - **View Workflows**: Browse your existing workflows.
 - **Create Workflow**: Redirects you to the Lab tab for creating a new workflow.
 
-![Workflows Image](workflows.png)
+![Workflows Image](/assets/img/creating-data-models/workflows.png)
 
 ### My Digital Resources
 
@@ -32,7 +32,7 @@ nav_order: 2
 
 **Functionality**: Links physical or digital assets to their operational data within DataCROP.
 
-![DS Image](ds.png)
+![DS Image](/assets/img/creating-data-models/ds.png)
 
 ### My Workers
 
@@ -44,7 +44,7 @@ nav_order: 2
 - Define worker specifications.
 - Assign workers to processors for deployment.
 
-![Workers Image](workers.png)
+![Workers Image](/assets/img/creating-data-models/workers.png)
 
 ### My Data Kinds
 
@@ -59,4 +59,4 @@ nav_order: 2
 
 **Functionality**: Facilitates precise processing and analysis of data.
 
-![Datakind Image](datakind.png)
+![Datakind Image](/assets/img/creating-data-models/datakind.png)

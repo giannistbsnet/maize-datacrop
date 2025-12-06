@@ -1,6 +1,7 @@
 ---
 layout: home
 permalink: /
+nav_exclude: true
 ---
 
 # DataCROP&#8482; Information 
