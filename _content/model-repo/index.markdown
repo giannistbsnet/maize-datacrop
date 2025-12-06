@@ -34,8 +34,8 @@ After completing the setup, follow these steps to configure your environment var
     MAX_REQUEST_SIZE=500MB
 
     # Workflow Management Engine
-    VM_WME_IP=167.235.128.77
-    VM_WORKER_IP=167.235.128.77
+    VM_WME_IP=<YOUR_IP>
+    VM_WORKER_IP=<YOUR_IP>
     WEBSERVER_DAGS_FOLDER=/home/itampaki/maze-processing-engine-airflow/dags
     WORKER_API_PORT=8090
 
