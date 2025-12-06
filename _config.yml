@@ -31,9 +31,8 @@ remote_theme: giannistbsnet/just-my-theme-doc@main
 
 
 aux_links:
-  DataCROP GitHub:
-    url: https://github.com/datacrop
-    external: true
+  DataCROP GitHub: https://github.com/datacrop
+aux_links_new_tab: true
 
 search_enabled: true
 
