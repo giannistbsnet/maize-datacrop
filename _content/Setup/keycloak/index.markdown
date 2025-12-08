@@ -34,7 +34,7 @@ Before starting, ensure you have:
 1. **Create a Client**:
    - Navigate to **Clients** > **Create**.
    - Name the client (e.g., `frontend-client`).
-   - In the **Root URL**, **Admin URL**, and **Base URL**, replace the IP `195.201.222.205` with your own machine's IP:
+   - In the **Root URL**, **Admin URL**, and **Base URL**, use your own machine's IP (placeholder shown below):
      ```json
      "rootUrl": "http://YOUR_IP",
      "adminUrl": "http://YOUR_IP",
