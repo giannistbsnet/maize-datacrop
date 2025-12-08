@@ -20,13 +20,13 @@ After completing the setup, follow these steps to configure your environment var
 2. Update the file with the correct values for your infrastructure. Current values from `maze-workflow-management-editor/.env` are:
 
     ```plaintext
-    VITE_API_URL=http://167.235.128.77:9090
-    VITE_BACKEND_IP=167.235.128.77
-    VITE_AIRFLOW_IP=167.235.128.77
-    VITE_KEYCLOAK_URL=https://keycloak.modul4r.rid-intrasoft.eu/
-    VITE_KEYCLOAK_REALM=MODUL4R-Platform
-    VITE_KEYCLOAK_CLIENT_ID=modul4r-front
-    VITE_PROJECT_NAME=MODUL4R
+    VITE_API_URL=http://<WME_API_HOST>:9090
+    VITE_BACKEND_IP=<WME_API_HOST>
+    VITE_AIRFLOW_IP=<AIRFLOW_HOST>
+    VITE_KEYCLOAK_URL=https://<KEYCLOAK_HOST>/
+    VITE_KEYCLOAK_REALM=<KEYCLOAK_REALM>
+    VITE_KEYCLOAK_CLIENT_ID=<KEYCLOAK_CLIENT_ID>
+    VITE_PROJECT_NAME=<PROJECT_NAME>
     VITE_DEFAULT_PRIMARY_COLOR=#DA3333
     ```
 
@@ -82,7 +82,7 @@ Wait for the services to start, then run the following commands:
 
 #### Make Sure Everything Works
 
-1. Open a browser and navigate to the [web application](http://195.201.222.205:5173/MainPage/Warehouse).
+1. Open a browser and go to `http://<WME_UI_HOST>:5173/MainPage/Warehouse`.
 2. You will be redirected to the Keycloak authentication page. Enter the credentials provided by your organization.
 3. After successful authentication, you will be redirected to the main page of the workflow management engine, where you can begin creating and managing workflows.
 
