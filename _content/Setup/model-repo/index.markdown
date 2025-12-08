@@ -90,26 +90,7 @@ After completing the setup, follow these steps to configure your environment var
 
    Sensitive secrets are redacted above; ensure your `.env` retains the real values currently configured.
 
-Once these parameters are correctly set, you can proceed with the deployment.
-
-1. **Configuration Adjustments**:
-   - Clone the repository and navigate to the [application.properties](maize-model-repository/model-repository-server/src/main/resources/application.properties) file and review the following parameters. Adjust them as necessary to match your environment:
-     - `VM.wme.ip`: Set the IP address of the WME (Workflow Management Engine).
-     - `VM.worker.ip`: Set the IP address of the Processing Engine Worker.
-     - `remote.host.wme`: Specify the remote host address for the WME.
-     - `remote.host.worker`: Specify the remote host address for the Processing Engine Worker.
-     - `webserver.dags.folder`: Path to the DAGs folder on the web server.
-     - `worker.dags.folder`: Path to the DAGs folder on the worker.
-     - `spring.data.mongodb.host`: Specify the IP address of the machine that hosts mongodb.
-     - `spring.kafka.bootstrap-servers`: Specify the IP address of the kafka bootstrap server.
-
-   - Also, it’s recommended to review the [docker-compose.yml](maize-model-repository/docker-compose.yml) file. Modify any parameters as needed to ensure compatibility with your specific setup.
-
-2. **SSH Key Configuration**:
-   - Make sure that all the machines participating in this infrastructure have SSH keys generated. Each machine should have the public SSH keys of all other machines added to its `~/.ssh/authorized_keys` file. This is essential for secure and seamless communication between the components.
-
-Once these prerequisites are met, you can proceed with the deployment steps.
-
+Once these parameters are correctly set, you can proceed with the deployment
 
 ### Starting the Application
 
