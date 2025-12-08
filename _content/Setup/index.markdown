@@ -16,11 +16,11 @@ Use the MVP path if you want a quick, reproducible deployment. Choose the manual
 
 ## Option 1: Maize MVP (single script)
 
-Follow the instructions in the [Maize MVP Setup page](/mvp/) to configure the env files in each component folder of the MVP repository and run the one-shot setup script.
+Follow the instructions in the [Maize MVP Setup page](/maize-mvp/) to configure the env files in each component folder of the MVP repository and run the one-shot setup script.
 
 ## Option 2: Manual per-repository setup
 
-If you prefer to deploy each component separately, follow these pages in order:
+If you prefer to deploy each component separately, go to the [Manual Setup landing page](/manual-setup/) and follow the component pages in order:
 - [Keycloak Setup](/keycloak/)
 - [Airflow Setup](/airflow/)
 - [Worker Setup](/worker/)

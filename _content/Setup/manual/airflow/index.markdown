@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "3. Airflow Setup"
-parent: Maize Setup
+title: "2. Airflow Setup"
+parent: "2. Manual Setup"
 permalink: /airflow/
-nav_order: 3
+nav_order: 2
 ---
 
 # DataCROP Maize Airflow Processing Engine Deployment
@@ -123,3 +123,4 @@ Wait for the services to start, then run the following commands:
 Navigate to the source directory and run the following command.
 
     docker-compose down
+
