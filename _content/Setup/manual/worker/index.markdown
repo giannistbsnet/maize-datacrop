@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 4. Worker Setup
-parent: Maize Setup
+title: "3. Worker Setup"
+parent: "2. Manual Setup"
 permalink: /worker/
-nav_order: 4
+nav_order: 3
 ---
 
 # DataCROP Maize Processing Engine Worker Deployment
@@ -125,3 +125,4 @@ Wait for the services to start, then run the following commands:
 Navigate to the source directory and run the following command.
 
     docker-compose down
+

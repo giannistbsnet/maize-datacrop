@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 6. Workflow Editor Setup
-parent: Maize Setup
+title: 5. Workflow Editor Setup
+parent: "2. Manual Setup"
 permalink: /editor/
-nav_order: 6
+nav_order: 5
 ---
 
 # DataCROP Maize Workflow Management Editor Deployment
@@ -108,3 +108,4 @@ Run this once per environment after deployments. Skipping it leaves the system u
 Navigate to the source directory and run the following command.
 
     docker-compose down
+

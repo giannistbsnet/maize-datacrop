@@ -1,9 +1,9 @@
 ---
 layout: page
-title: 5. Model Repository Setup
-parent: Maize Setup
+title: 4. Model Repository Setup
+parent: "2. Manual Setup"
 permalink: /model-repo/
-nav_order: 5
+nav_order: 4
 ---
 
 # DataCROP Maize Model Repository Deployment
@@ -170,3 +170,4 @@ docker-compose down
 Run the following command (**at your own risk**).
 
     docker-compose down --volumes --remove-orphans
+

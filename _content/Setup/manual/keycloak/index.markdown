@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "2. Keycloak Setup"
-parent: Maize Setup
+title: "1. Keycloak Setup"
+parent: "2. Manual Setup"
 permalink: /keycloak/
-nav_order: 2
+nav_order: 1
 ---
 
 # Keycloak Authentication Setup
@@ -123,7 +123,6 @@ Before starting, ensure you have:
 4. **Create a Wrapper-Dedicated Client Scope**:
    - Ensure there is a wrapper-dedicated client scope.
 
-
 ### 6. Configure Realm Roles
 
 1. **Verify Default Roles**:
@@ -161,8 +160,8 @@ Before starting, ensure you have:
    - Navigate to the **Realm Settings** section.
    - Adjust session duration settings and token settings according to the service's security requirements.
 
-
 ### Final Steps
 
 - After configuring all clients, ensure that each client is properly assigned its dedicated scope and roles.
 - You can verify the configuration by testing the login and authentication flows for the frontend, backend, and wrapper components.
+

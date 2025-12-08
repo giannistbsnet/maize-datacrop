@@ -2,7 +2,7 @@
 layout: page
 title: "1. Maize MVP Setup"
 parent: Maize Setup
-permalink: /mvp/
+permalink: /maize-mvp/
 nav_order: 1
 ---
 
