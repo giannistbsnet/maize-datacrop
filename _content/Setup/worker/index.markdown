@@ -1,12 +1,14 @@
 ---
 layout: page
-title: 3. Worker Setup
+title: 4. Worker Setup
 parent: Maize Setup
 permalink: /worker/
-nav_order: 3
+nav_order: 4
 ---
 
 # DataCROP Maize Processing Engine Worker Deployment
+
+Use this page when following the **manual per-repository setup**. If you use **Maize MVP**, the worker is deployed by the MVP script; refer here only for customization or troubleshooting. See [Maize Setup](/Setup/) for the two setup options.
 
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys a Worker responsible for handling tasks within the **DataCROP Workflow Management Engine**. The deployment consists of a single container.
 

@@ -1,12 +1,14 @@
 ---
 layout: page
-title: "1. Keycloak Setup"
+title: "2. Keycloak Setup"
 parent: Maize Setup
 permalink: /keycloak/
-nav_order: 1
+nav_order: 2
 ---
 
 # Keycloak Authentication Setup
+
+Use this page for the **manual per-repository setup**. That path assumes you configure Keycloak before deploying the other components. If you are using the **Maize MVP** path, Keycloak is provisioned/configured automatically; consult this page only if you need to customize it. See [Maize Setup](/Setup/) for the two setup options.
 
 This page will guide you through the steps required to set up Keycloak for the entire service. You will need to configure three Keycloak clients: one for the frontend, one for the backend, and one for the wrapper. Ensure you have administrator access to Keycloak to follow these steps.
 

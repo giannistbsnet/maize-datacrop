@@ -8,6 +8,8 @@ nav_order: 1
 
 # Getting Started
 
+Before using the Workflow Editor, choose a deployment path on the [Maize Setup](/Setup/) page: either the single-script Maize MVP approach or the manual per-repository setup.
+
 ## Accessing the Workflow Editor
 
 To access the Workflow Editor, you need to log in using **Keycloak**. You can authenticate in one of two ways:
