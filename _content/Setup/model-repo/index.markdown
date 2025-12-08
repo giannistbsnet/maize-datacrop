@@ -1,12 +1,14 @@
 ---
 layout: page
-title: 4. Model Repository Setup
+title: 5. Model Repository Setup
 parent: Maize Setup
 permalink: /model-repo/
-nav_order: 4
+nav_order: 5
 ---
 
 # DataCROP Maize Model Repository Deployment
+
+Use this page when following the **manual per-repository setup**. If you use **Maize MVP**, the model repository is deployed by the MVP script; refer here only for customization or troubleshooting. See [Maize Setup](/Setup/) for the two setup options.
 
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys the **DataCROP Model Repository infrastructure**, consisting of two containers.
 
@@ -89,6 +91,29 @@ After completing the setup, follow these steps to configure your environment var
     ```
 
    Sensitive secrets are redacted above; ensure your `.env` retains the real values currently configured.
+
+### Optional: Predefining custom processors (before deploying the editor)
+
+- You can ship extra processor definitions for your project by adding a JSON file at `config/extra-processors.json` in the model repository project. The docker compose mounts it like:
+  - `./config/extra-processors.json:/app/config/extra-processors.json:ro`
+- The file contains an array of processor definitions. Example:
+
+  ```json
+  [
+    {
+      "name": "custom-logstash",
+      "type": "logstash",
+      "description": "Moves data from source A to sink B",
+      "image": "harbor.example.com/project/logstash-custom:1.0.0",
+      "parameters": {
+        "input": "digitalResourceIdA",
+        "output": "digitalResourceIdB"
+      }
+    }
+  ]
+  ```
+
+- Workflow: place your JSON file, deploy the Model Repository, deploy the Workflow Editor, then log in and click **Initialize resources** (see [Workflow Editor Setup](/editor/)). The initialization step loads this file and creates both the default and any extra processors you defined.
 
 Once these parameters are correctly set, you can proceed with the deployment
 

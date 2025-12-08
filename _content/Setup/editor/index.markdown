@@ -1,13 +1,15 @@
 ---
 layout: page
-title: 5. Workflow Editor Setup
+title: 6. Workflow Editor Setup
 parent: Maize Setup
 permalink: /editor/
-nav_order: 5
+nav_order: 6
 ---
 
 # DataCROP Maize Workflow Management Editor Deployment
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys the **DataCROP Workflow Management Engine** web application for creating and managing workflows. The deployment consists of a single container.
+
+Use this page when following the **manual per-repository setup**. If you use **Maize MVP**, the editor is deployed by the MVP script; follow the initialization steps below once it is up. See [Maize Setup](/Setup/) for the two setup options.
 
 
 ### Prerequisites
@@ -79,6 +81,20 @@ Wait for the services to start, then run the following commands:
     maze-workflow-management-editor_wme-network   bridge    local
     ```
 
+
+### Post-deployment initialization (required)
+
+Perform this step after the UI is reachable (applies to both Maize MVP and manual setups):
+
+1. Log in through Keycloak.
+2. In the Workflow Editor UI, open **Settings**.
+3. Click **Initialize resources**.
+
+What this does:
+- Creates the base data models, workers, digital resources, and processor definitions needed for the application to function.
+- Imports any custom processors defined in `config/extra-processors.json` of the Model Repository (see [Model Repository Setup](/model-repo/)).
+
+Run this once per environment after deployments. Skipping it leaves the system uninitialized.
 
 #### Make Sure Everything Works
 

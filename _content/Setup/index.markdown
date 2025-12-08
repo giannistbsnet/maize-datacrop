@@ -7,11 +7,25 @@ nav_order: 2
 
 # DataCROP Maize Workflow Management Engine Deployment
 
-**This is a demo deployment instance for the Maize DataCROP version**
+You can set up the Maize stack in two ways:
 
+1. **Maize MVP (recommended)** — a single repository and script that brings up all Maize components together. Start here if you want the fastest path to a working demo.
+2. **Manual per-repository setup** — deploy each component yourself (Keycloak, Airflow, Worker, Model Repository, Workflow Editor) for fine-grained control.
 
+Use the MVP path if you want a quick, reproducible deployment. Choose the manual path if you need to customize each service, change infrastructure details, or operate components independently.
 
-In the sections below, you will find detailed instructions on setting up the various components of the DataCROP Maize system. 
+## Option 1: Maize MVP (single script)
 
-It is important to follow the deployment steps in the order presented to ensure proper integration. Start with the **DataCROP Maize Airflow Processing Engine**, which manages workflow tasks, followed by the **Processing Engine Worker**, responsible for executing these tasks. Afterward, deploy the **Model Repository**, which provides the infrastructure for managing models. Finally, set up the **Workflow Management Editor**, which allows you to create and manage workflows through the web application.
+Follow the instructions in the [Maize MVP Setup page](/mvp/) to configure the env files in each component folder of the MVP repository and run the one-shot setup script.
+
+## Option 2: Manual per-repository setup
+
+If you prefer to deploy each component separately, follow these pages in order:
+- [Keycloak Setup](/keycloak/)
+- [Airflow Setup](/airflow/)
+- [Worker Setup](/worker/)
+- [Model Repository Setup](/model-repo/)
+- [Workflow Editor Setup](/editor/)
+
+You can still reference the manual pages even when using the MVP path to understand what each service does and what each environment variable controls.
 

@@ -1,12 +1,14 @@
 ---
 layout: page
-title: "2. Airflow Setup"
+title: "3. Airflow Setup"
 parent: Maize Setup
 permalink: /airflow/
-nav_order: 2
+nav_order: 3
 ---
 
 # DataCROP Maize Airflow Processing Engine Deployment
+
+Use this page when following the **manual per-repository setup**. If you use **Maize MVP**, this component is deployed by the MVP script; refer here only for customization or troubleshooting. See [Maize Setup](/Setup/) for the two setup options.
 
 This is a demo deployment instance for the **Maize DataCROP version**. It deploys the Airflow web server responsible for managing tasks within the **DataCROP Workflow Management Engine** infrastructure. The deployment consists of six containers.
 
