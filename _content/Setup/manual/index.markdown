@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "2. Manual Setup"
+title: "Manual Setup"
 parent: Maize Setup
 permalink: /manual-setup/
 nav_order: 2
