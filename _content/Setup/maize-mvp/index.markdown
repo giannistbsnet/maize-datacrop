@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "1. Maize MVP Setup"
+title: "Maize MVP Setup"
 parent: Maize Setup
 permalink: /maize-mvp/
 nav_order: 1
