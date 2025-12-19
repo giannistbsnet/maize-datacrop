@@ -26,7 +26,7 @@ Before proceeding with the deployment, make sure to complete the following steps
 
 After completing the setup, follow these steps to configure your environment variables:
 
-1. Navigate to the [`.env` file](.env) and ensure that all necessary environment variables are set correctly for your deployment. Current values from `maze-processing-engine-airflow/.env` are shown below; sensitive secrets are redacted—keep using the real values already present in your `.env`.
+1. In the Airflow Processing Engine repository, edit its `.env` file and ensure that all necessary environment variables are set correctly for your deployment. Current values from `maze-processing-engine-airflow/.env` are shown below; sensitive secrets are redacted—keep using the real values already present in your `.env`.
 
     ```plaintext
     # AIRFLOW USERS     ||  DC.C
@@ -123,4 +123,3 @@ Wait for the services to start, then run the following commands:
 Navigate to the source directory and run the following command.
 
     docker-compose down
-

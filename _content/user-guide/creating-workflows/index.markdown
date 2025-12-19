@@ -44,7 +44,9 @@ nav_order: 3
 **Note**: Before creating a processor in the Flow Creator, ensure that you have already created the data models you plan to use with it. This includes the worker asset and the digital resources that will represent the data input and output you plan to add.
 
 **Basic Processor Types Supported**:
-- **Streamhandler**: Deploys a full Kafka cluster.
-- **Logstash**: Creates a pipeline that transfers data from one digital resource to another.
-- **Kibana**: Creates a Logstash pipeline that takes input from a digital resource and transfers it to Elasticsearch for visualization through the workflow editor.
-- **Logstash -> Observation**: Creates a Logstash pipeline that takes data from the input digital resource, converts it into an observation, and saves it in a predefined collection.
+- **Apache Kafka**: Creates a Kafka cluster (used as infrastructure for streaming workflows).
+- **Logstash Pipeline**: Creates a pipeline that transfers data from one digital resource to another (supports a custom `logstash_filter`).
+- **Kibana Pipeline**: Creates a pipeline that takes input from a digital resource and forwards it to Elasticsearch for visualization through the editor.
+- **Context Extraction**: Example processing component shipped as a processor definition (your deployment may include different processors).
+
+**Note**: The list of available processors is driven by processor definitions stored in the Model Repository. Deployers can add more definitions via `config/extra-processors.json` and import them during initialization.

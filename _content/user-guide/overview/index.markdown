@@ -14,9 +14,8 @@ Available processors depend on your deployment; administrators can ship predefin
 
 ## Accessing the Workflow Editor
 
-To access the Workflow Editor, you need to log in using **Keycloak**. You can authenticate in one of two ways:
+To access the Workflow Editor, you log in using **Keycloak**. The exact login options depend on how your Keycloak realm is configured (for example, username/password, or an external identity provider such as GitHub if enabled).
 
-1. Using credentials you already have.
-2. Using **Single Sign-On (SSO)** with your GitHub account.
+For the backend API calls used by the editor, the JWT token must include a `userId` claim, otherwise the backend cannot resolve the current user and requests will fail.
 
 ![Keycloak Image](/assets/img/overview/keycloak.png)

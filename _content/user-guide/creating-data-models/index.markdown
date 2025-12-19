@@ -27,10 +27,11 @@ nav_order: 2
 **Purpose**: Provides a context and connection interface for accessing and utilizing data.
 
 **Key Attributes**:
-- **assetID**: Identifies the asset.
-- **dataKindID**: Links to the type of data the resource manages.
+- **dataInterfaceTypeID**: Links to the data interface type (e.g., `kafka`, `elasticsearch`, `API REST`).
+- **dataKindID**: (Optional) Links to the type of data the resource manages.
+- **parameterValue**: A list of parameter values required by the selected data interface type.
 
-**Functionality**: Links physical or digital assets to their operational data within DataCROP.
+**Functionality**: Provides reusable, parameterized connection details (for example Kafka topic configuration or Elasticsearch connection details) that processors can reference as workflow inputs/outputs.
 
 ![DS Image](/assets/img/creating-data-models/ds.png)
 

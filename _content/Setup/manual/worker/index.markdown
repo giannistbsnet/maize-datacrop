@@ -46,7 +46,7 @@ Before proceeding, ensure that you have followed the setup instructions for the 
 
 After completing the setup, follow these steps to configure your environment variables:
 
-1. Navigate to the [`.env` file](.env) and ensure that all necessary environment variables are set correctly for your deployment. Current values from `maze-processing-engine-worker/.env` are shown below; sensitive secrets are redacted—keep using the real values already present in your `.env`.
+1. In the Processing Engine Worker repository, edit its `.env` file and ensure that all necessary environment variables are set correctly for your deployment. Current values from `maze-processing-engine-worker/.env` are shown below; sensitive secrets are redacted—keep using the real values already present in your `.env`.
 
     ```plaintext
     # HOST              ||  DC.C
@@ -125,4 +125,3 @@ Wait for the services to start, then run the following commands:
 Navigate to the source directory and run the following command.
 
     docker-compose down
-
