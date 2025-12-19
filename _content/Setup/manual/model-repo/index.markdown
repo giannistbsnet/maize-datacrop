@@ -92,28 +92,134 @@ After completing the setup, follow these steps to configure your environment var
 
    Sensitive secrets are redacted above; ensure your `.env` retains the real values currently configured.
 
-### Optional: Predefining custom processors (before deploying the editor)
+### Optional: Predefining processor definitions (before initialization)
 
-- You can ship extra processor definitions for your project by adding a JSON file at `config/extra-processors.json` in the model repository project. The docker compose mounts it like:
-  - `./config/extra-processors.json:/app/config/extra-processors.json:ro`
-- The file contains an array of processor definitions. Example:
+Deployers can ship **predefined processor definitions** that will be imported when a Workflow Editor user clicks **Initialize resources**. This lets each deployed instance come up with a customized processor catalog.
 
-  ```json
-  [
+#### How to use
+
+1. Create `config/extra-processors.json` (use the template file as a starting point):
+   - `cp config/extra-processors.example.json config/extra-processors.json`
+2. Edit `config/extra-processors.json`:
+   - **Kafka is just an example** in the template; rename the processor `name` and/or replace the entry with your own processors.
+3. Ensure the file is mounted into the Model Repository container (already present in `docker-compose.yml`):
+   - `./config/extra-processors.json:/app/config/extra-processors.json:ro`
+4. Deploy the Model Repository, then in the Workflow Editor go to **Settings** → **Initialize resources** (see [Workflow Editor Setup](/editor/)).
+
+#### File format (schema)
+
+The server expects a root object with a `processors` array:
+
+- Root: `{ "processors": [ ... ] }`
+- Each processor:
+  - `name`, `description`, `processorType`, `version`, `copyright`, `processorLocation`, `fontAwesomeIcon`, `projectName`, `containerImage`
+  - `parameters`: a list of `{ "name", "description", "type", "defaultValue" }`
+
+Example (from `config/extra-processors.example.json`):
+
+```json
+{
+  "processors": [
     {
-      "name": "custom-logstash",
-      "type": "logstash",
-      "description": "Moves data from source A to sink B",
-      "image": "harbor.example.com/project/logstash-custom:1.0.0",
-      "parameters": {
-        "input": "digitalResourceIdA",
-        "output": "digitalResourceIdB"
-      }
+      "name": "Kafka Example",
+      "description": "This processor is used for building a Kafka cluster alongside the akhq frontend for visualizations",
+      "processorType": "Data Persistence",
+      "version": "0.1",
+      "copyright": "Apache",
+      "processorLocation": "Local Deployment",
+      "fontAwesomeIcon": "fa-solid fa-bus",
+      "projectName": "test",
+      "containerImage": "",
+      "parameters": [
+        {
+          "name": "KAFKA_NETWORK",
+          "description": "",
+          "type": "String",
+          "defaultValue": "kafka-network"
+        },
+        {
+          "name": "KAFKA_DATA",
+          "description": "",
+          "type": "String",
+          "defaultValue": "kafka-data"
+        },
+        {
+          "name": "KAFKA_HOSTNAME",
+          "description": "",
+          "type": "String",
+          "defaultValue": "kafka"
+        },
+        {
+          "name": "KAFKA_CONTAINER_NAME",
+          "description": "",
+          "type": "String",
+          "defaultValue": "kafka"
+        },
+        {
+          "name": "KAFKA_EXTERNAL_PORT",
+          "description": "",
+          "type": "String",
+          "defaultValue": "9092"
+        },
+        {
+          "name": "KAFKA_EXTERNAL_HOSTNAME_OR_IP",
+          "description": "",
+          "type": "String",
+          "defaultValue": "167.235.128.77"
+        },
+        {
+          "name": "KAFKA_INTERNAL_PORT",
+          "description": "",
+          "type": "String",
+          "defaultValue": "9094"
+        },
+        {
+          "name": "KAFKA_INTERNAL_HOSTNAME_OR_IP",
+          "description": "",
+          "type": "String",
+          "defaultValue": "kafka"
+        },
+        {
+          "name": "CLUSTER_ID",
+          "description": "kraft mode cluster id",
+          "type": "String",
+          "defaultValue": "cluster-id"
+        },
+        {
+          "name": "AKHQ_CONTAINER_NAME",
+          "description": "",
+          "type": "String",
+          "defaultValue": "akhq"
+        },
+        {
+          "name": "AKHQ_IMAGE",
+          "description": "",
+          "type": "String",
+          "defaultValue": "0.24.0"
+        },
+        {
+          "name": "AKHQ_PORT",
+          "description": "",
+          "type": "String",
+          "defaultValue": "8081"
+        },
+        {
+          "name": "AKHQ_CONNECTION_NAME_PREFIX",
+          "description": "",
+          "type": "String",
+          "defaultValue": "kafka-connection"
+        }
+      ]
     }
   ]
-  ```
+}
+```
 
-- Workflow: place your JSON file, deploy the Model Repository, deploy the Workflow Editor, then log in and click **Initialize resources** (see [Workflow Editor Setup](/editor/)). The initialization step loads this file and creates both the default and any extra processors you defined.
+#### Behavior notes
+
+- If the file is missing or invalid, initialization continues without failing.
+- If a processor definition with the same `name` already exists, it is skipped (not overwritten).
+- Changing `name` (for example, adding `v2`) creates a separate processor definition.
 
 Once these parameters are correctly set, you can proceed with the deployment
 
@@ -170,4 +276,3 @@ docker-compose down
 Run the following command (**at your own risk**).
 
     docker-compose down --volumes --remove-orphans
-

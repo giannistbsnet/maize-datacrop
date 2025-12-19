@@ -47,11 +47,11 @@ After the Workflow Editor UI is reachable:
 
 1. Log in via Keycloak.
 2. Go to **Settings** in the editor UI.
-3. Click **Initialize resources** (see [Workflow Editor Setup](/editor/) for details).
-4. This creates the base resources and any extra processors defined via the Model Repository. Skipping this leaves the system uninitialized.
+3. (Optional) Add predefined processor definitions by placing `extra-processors.json` in the Model Repository component's `config/` folder (copy from `extra-processors.example.json`) before running the MVP script / before initialization (see [Model Repository Setup](/model-repo/) for schema details).
+4. Click **Initialize resources** (see [Workflow Editor Setup](/editor/) for details).
+5. This creates the base resources and any extra processors defined via the Model Repository. Skipping this leaves the system uninitialized.
 
 ## Notes on Keycloak
 
 - In the MVP path, Keycloak is provisioned/configured automatically by the script; you do not need a pre-existing Keycloak instance.
 - If you need to customize Keycloak manually, refer to the [Keycloak Setup](/keycloak/) page.
-
