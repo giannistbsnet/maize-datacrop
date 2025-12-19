@@ -10,7 +10,7 @@ nav_order: 4
 
 Use this page when following the **manual per-repository setup**. If you use **Maize MVP**, the model repository is deployed by the MVP script; refer here only for customization or troubleshooting. See [Maize Setup](/Setup/) for the two setup options.
 
-This is a demo deployment instance for the **Maize DataCROP version**. It deploys the **DataCROP Model Repository infrastructure**, consisting of two containers.
+This is a demo deployment instance for the **Maize DataCROP version**. It deploys the **DataCROP Model Repository infrastructure**, consisting of the WME server plus supporting containers (MongoDB and the Elastic Stack services used by Logstash/Kibana pipelines).
 
 ### Requirements
 
@@ -220,6 +220,10 @@ Example (from `config/extra-processors.example.json`):
 - If the file is missing or invalid, initialization continues without failing.
 - If a processor definition with the same `name` already exists, it is skipped (not overwritten).
 - Changing `name` (for example, adding `v2`) creates a separate processor definition.
+
+### Notes about default values created during initialization
+
+The **Initialize resources** action creates some default interface templates and processor definitions with deployment-specific defaults (for example IPs/ports for Elasticsearch/Kafka). Review and update the created entities in the UI after initialization if the defaults do not match your environment.
 
 Once these parameters are correctly set, you can proceed with the deployment
 

@@ -12,6 +12,15 @@ Use this page for the **manual per-repository setup**. That path assumes you con
 
 This page will guide you through the steps required to set up Keycloak for the entire service. You will need to configure three Keycloak clients: one for the frontend, one for the backend, and one for the wrapper. Ensure you have administrator access to Keycloak to follow these steps.
 
+## Token contents expected by the backend
+
+The Model Repository backend relies on information inside the JWT to identify the current user.
+
+- The backend expects a custom claim named `userId` to exist in the access token. If it is missing, API calls that depend on the current user will fail with “User not found”.
+- The backend also reads roles from the token (realm roles and/or client roles). The deployment commonly uses roles such as `admin` and `super-admin`.
+
+If your realm does not already provide a `userId` claim, add a Keycloak protocol mapper so the access token contains it (for example mapping to the user UUID or another unique user identifier used by your deployment).
+
 ## Prerequisites
 
 Before starting, ensure you have:
@@ -164,4 +173,3 @@ Before starting, ensure you have:
 
 - After configuring all clients, ensure that each client is properly assigned its dedicated scope and roles.
 - You can verify the configuration by testing the login and authentication flows for the frontend, backend, and wrapper components.
-
