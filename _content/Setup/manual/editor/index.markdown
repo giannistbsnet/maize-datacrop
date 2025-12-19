@@ -90,6 +90,8 @@ Perform this step after the UI is reachable (applies to both Maize MVP and manua
 2. In the Workflow Editor UI, open **Settings**.
 3. Click **Initialize resources**.
 
+If you want instance-specific predefined processors, configure `config/extra-processors.json` in the Model Repository before clicking Initialize resources; use `config/extra-processors.example.json` as a template.
+
 What this does:
 - Creates the base data models, workers, digital resources, and processor definitions needed for the application to function.
 - Imports any custom processors defined in `config/extra-processors.json` of the Model Repository (see [Model Repository Setup](/model-repo/)).
@@ -108,4 +110,3 @@ Run this once per environment after deployments. Skipping it leaves the system u
 Navigate to the source directory and run the following command.
 
     docker-compose down
-
