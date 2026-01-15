@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "3. Worker Setup"
-parent: "2. Manual Setup"
+parent: Manual Setup
 permalink: /worker/
 nav_order: 3
 ---

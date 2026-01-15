@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "2. Airflow Setup"
-parent: "2. Manual Setup"
+parent: Manual Setup
 permalink: /airflow/
 nav_order: 2
 ---
