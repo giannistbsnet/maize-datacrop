@@ -92,9 +92,67 @@ After completing the setup, follow these steps to configure your environment var
 
    Sensitive secrets are redacted above; ensure your `.env` retains the real values currently configured.
 
+### Defaults created by Initialize resources
+
+When a Workflow Editor user clicks **Settings** → **Initialize resources**, the Model Repository seeds a baseline catalog (only if the resources don't already exist). This includes default **data interface types** and **processor definitions**.
+
+#### Default data interface types
+
+These interface types are intentionally aligned with the editor's **automatic Logstash pipeline creation**: the editor uses these type names and fields to generate Logstash input/output configuration automatically.
+
+- **`elasticsearch`**
+  - `hosts`: `167.235.128.77:9200`
+  - `user`: `logstash_internal`
+  - `password`: `${LOGSTASH_INTERNAL_PASSWORD}`
+  - `index`: `test_index`
+- **`kafka`**
+  - `bootstrap_servers`: `167.235.128.77:9092`
+  - `topic_id`: `giannis_processed`
+- **`http`**
+  - `url`: `http://localhost:8080/api`
+  - `port`: `8080`
+  - `http_method`: `post`
+  - `format`: `json`
+  - `user`: `""`
+  - `password`: `""`
+- **`mongodb`**
+  - `uri`: `mongodb://localhost:27017/mydb`
+  - `database`: `mydb`
+  - `collection`: `mycollection`
+- **`s3`**
+  - `bucket`: `my-bucket`
+  - `region`: `eu-central-1`
+  - `endpoint`: `""` (empty means AWS S3; otherwise can be e.g. `http://minio:9000`)
+  - `access_key_id`: `""`
+  - `secret_access_key`: `""`
+  - `prefix`: `logs/`
+- **`redis`**
+  - `host`: `localhost`
+  - `port`: `6379`
+  - `data_type`: `list` (supported: `list`, `channel`, `pattern_channel`)
+  - `key`: `mylist`
+  - `password`: `""`
+- **`rabbitmq`**
+  - `host`: `localhost`
+  - `port`: `5672`
+  - `user`: `guest`
+  - `password`: `guest`
+  - `queue`: `myqueue` (input)
+  - `exchange`: `myexchange` (output)
+  - `exchange_type`: `direct` (supported: `direct`, `topic`, `fanout`)
+  - `vhost`: `/`
+
+#### Default processor definitions
+
+Initialize resources also creates these processor definitions (if missing):
+
+- **`Apache Kafka`** (`Data Persistence`, `0.1`) — provisions Kafka + AKHQ.
+- **`Kibana Pipeline`** (`Datacrop Service`, `1.0`) — enables the built-in Kibana pipeline (`active=true`).
+- **`Logstash Pipeline`** (`Datacrop Service`, `1.0`) — enables the built-in Logstash pipeline (`active=true`); `logstash_filter` defaults to empty and expects filter plugin content only (no `filter {}` wrapper).
+
 ### Optional: Predefining processor definitions (before initialization)
 
-Deployers can ship **predefined processor definitions** that will be imported when a Workflow Editor user clicks **Initialize resources**. This lets each deployed instance come up with a customized processor catalog.
+In addition to the defaults above, deployers can ship **predefined processor definitions** that will be imported when a Workflow Editor user clicks **Initialize resources**. This lets each deployed instance come up with a customized processor catalog.
 
 #### How to use
 
@@ -223,7 +281,7 @@ Example (from `config/extra-processors.example.json`):
 
 ### Notes about default values created during initialization
 
-The **Initialize resources** action creates some default interface templates and processor definitions with deployment-specific defaults (for example IPs/ports for Elasticsearch/Kafka). Review and update the created entities in the UI after initialization if the defaults do not match your environment.
+The **Initialize resources** action creates the default interface templates and processor definitions listed above with deployment-specific defaults (for example IPs/ports for Elasticsearch/Kafka). Review and update the created entities in the UI after initialization if the defaults do not match your environment.
 
 Once these parameters are correctly set, you can proceed with the deployment
 

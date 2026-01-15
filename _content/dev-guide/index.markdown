@@ -3,15 +3,28 @@ layout: page
 title: Developer Guide
 permalink: /dev-guide/
 nav_order: 4
+has_children: true
 ---
 
 # DataCROP Maize Workflow Management Engine Developer Guide
 
-## Overview
+The Workflow Management Engine (WME) is the DataCROP Maize application for modeling workflows and running processors. This guide focuses on developer-facing integration points, especially how to package processors and connect them to WME data inputs and outputs.
 
-The Workflow Management Engine application is designed to facilitate efficient creation and management of workflows through four primary tabs in the sidebar: **Warehouse**, **Lab**, **Airflow**, and **Kibana**. Each tab serves a distinct purpose within the application.
+## Who this guide is for
 
-- **Warehouse**: A repository for creating and managing the data models that are used in workflows.
-- **Lab**: A dedicated space for designing and configuring workflows, leveraging the data models from the Warehouse.
-- **Airflow**: For monitoring the deployment of components.
-- **Kibana**: For data visualization.
+- Developers integrating custom processors into WME workflows.
+- Teams packaging services with `docker-compose.yml` and runtime `.env` configuration.
+- Engineers wiring processors to WME digital resources for data input and output.
+
+## What you'll learn
+
+- What "processor integration" means in WME: a packaging contract plus a data I/O compatibility contract.
+- How to expose WME-compatible env vars derived from data interface types.
+- Where to find user-guide context on digital resources and workflow wiring.
+
+## Developer guide map
+
+- [Integrating Custom Processors](/integrating-processors/): packaging requirements and WME-compatible data I/O env vars.
+- Processor definitions and Model Repository defaults (planned).
+- Workflow execution and worker deployment integration points (planned).
+- API and automation hooks (planned).
