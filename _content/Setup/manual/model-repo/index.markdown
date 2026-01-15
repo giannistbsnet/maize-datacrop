@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 4. Model Repository Setup
-parent: "2. Manual Setup"
+parent: Manual Setup
 permalink: /model-repo/
 nav_order: 4
 ---

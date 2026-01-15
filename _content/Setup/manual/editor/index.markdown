@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 5. Workflow Editor Setup
-parent: "2. Manual Setup"
+parent: Manual Setup
 permalink: /editor/
 nav_order: 5
 ---

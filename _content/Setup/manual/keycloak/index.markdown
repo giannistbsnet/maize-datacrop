@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "1. Keycloak Setup"
-parent: "2. Manual Setup"
+parent: Manual Setup
 permalink: /keycloak/
 nav_order: 1
 ---
