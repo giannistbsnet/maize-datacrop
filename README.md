@@ -2,10 +2,13 @@
 
 <div align="center">
 
+[![Deploy Docusaurus to GitHub Pages](https://github.com/datacrop/datacrop/actions/workflows/deploy.yml/badge.svg)](https://github.com/datacrop/datacrop/actions/workflows/deploy.yml)
+
 ### Static Site Generation
-![Jekyll](https://img.shields.io/badge/Jekyll-4.3+-CC0000?style=for-the-badge&logo=jekyll&logoColor=white)
-![Just the Docs](https://img.shields.io/badge/Theme-Just_the_Docs-0D2538?style=for-the-badge)
-![Ruby](https://img.shields.io/badge/Ruby-3.3+-CC342D?style=for-the-badge&logo=ruby&logoColor=white)
+![Docusaurus](https://img.shields.io/badge/Docusaurus-v3-3ecc5f?style=for-the-badge&logo=docusaurus&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-20-43853D?style=for-the-badge&logo=node.js&logoColor=white)
 
 ### Language & Tooling
 ![Vue.js](https://img.shields.io/badge/Frontend-Vue.js-42b883?style=for-the-badge&logo=vuedotjs&logoColor=white)
@@ -36,24 +39,31 @@ DataCROP (Data Collection Routing & Processing) is a configurable framework for 
 ## Demo Environment
 Deployable Farro demo: `https://github.com/datacrop/farro-demo-deployment-scripts`.
 
-## Run the Docs Locally
-1. Ensure Ruby and Bundler are installed.
+## Local Development (Documentation)
+
+The documentation has been migrated to Docusaurus v3 and lives in the root directory. To run the site locally:
+
+1. Ensure Node.js 20+ is installed.
 2. Install dependencies:
+   ```bash
+   npm install
    ```
-   bundle install
+3. Start the local development server:
+   ```bash
+   npm start
    ```
-3. Serve the site:
+   This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+4. Build the static site (to verify production build):
+   ```bash
+   npm run build
    ```
-   bundle exec jekyll serve
-   ```
-4. Visit `http://localhost:4000` (adjust `baseurl` if configured).
+   This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ## Documentation Structure
-- `_content/index.markdown`: Documentation landing page.
-- `_content/home/`: Framework overview and roadmap.
-- `_content/Setup/`: Setup landing page.
-- `_content/Setup/maize-mvp/`: Single-script Maize MVP deployment.
-- `_content/Setup/manual/`: Manual component setup (Keycloak, Airflow, Worker, Model Repository, Workflow Editor).
-- `_content/user-guide/`: End-user workflows, data models, and overview pages.
-- `_content/dev-guide/`: Developer guidance, including processor integration.
 
+All markdown content files are now located in the `docs/` directory.
+- `docs/home/` - Framework overview and roadmap.
+- `docs/setup/` - Maize setup instructions (MVP and manual per-component guides).
+- `docs/user-guide/` - End-user workflows, data models, and Pipeline configurations.
+- `docs/dev-guide/` - Developer guidance, including processor integration.
