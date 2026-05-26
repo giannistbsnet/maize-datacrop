@@ -12,7 +12,7 @@ const config: Config = {
   },
 
   url: 'https://doc.datacrop.eu',
-  baseUrl: '/datacrop/',
+  baseUrl: '/',
 
   organizationName: 'datacrop',
   projectName: 'datacrop',
