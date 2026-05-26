@@ -31,19 +31,19 @@ After completing the setup, follow these steps to configure your environment var
     ```plaintext
     # AIRFLOW USERS     ||  DC.C
     AIRFLOW_UID=1002
-    DOCKER_GID=988
     AIRFLOW_WEB_PORT=8080
-    AIRFLOW_WWW_UNAME_USERNAME='airflow'
     AIRFLOW_WEB_PSSWD=[REDACTED – keep existing value in your .env]
     AIRFLOW_WEB_SSL_CERT=/security/airflow/airflow.pem
     AIRFLOW_WEB_SSL_KEY=/security/airflow/airflow-key.pem
     AIRFLOW_CA_CERT=/security/ca/rootCA.pem
     AIRFLOW_WEB_SECRET_KEY=[REDACTED – keep existing value in your .env]
     AIRFLOW_FERNET_KEY=[REDACTED – keep existing value in your .env]
+    _PIP_ADDITIONAL_REQUIREMENTS=''
+    _AIRFLOW_WEB_UNAME='airflow'
+    _AIRFLOW_WEB_PSSWD='airflow'
 
     # HOST              ||  DC.C
     HOST_IP=<HOST_IP>
-    # WORKER_NAME=worker01
 
     # REDIS             ||  DC.C
     REDIS_TLS_PORT=6379
@@ -67,8 +67,8 @@ After completing the setup, follow these steps to configure your environment var
     CELERY_FLOWER_KEY=/security/flower/flower-key.pem
     CELERY_FLOWER_CA_CERT=/security/ca/rootCA.pem
 
-    REMOTE_WORKER_NAME=<REMOTE_WORKER_NAME>
-    REMOTE_WORKER_IP=<REMOTE_WORKER_IP>
+    # Worker SSL         ||  DC.C
+    WORKER_SSL_KEY_FILE=/security/worker/worker-key.pem
     ```
 
    Sensitive secrets are redacted above; ensure your `.env` retains the real values currently configured.

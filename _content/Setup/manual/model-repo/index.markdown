@@ -36,8 +36,6 @@ After completing the setup, follow these steps to configure your environment var
     MAX_REQUEST_SIZE=500MB
 
     # Workflow Management Engine
-    VM_WME_IP=<YOUR_IP>
-    VM_WORKER_IP=<YOUR_IP>
     WEBSERVER_DAGS_FOLDER=/path/to/maize-processing-engine-airflow/dags
     WORKER_API_PORT=8090
 
@@ -47,8 +45,6 @@ After completing the setup, follow these steps to configure your environment var
     HARBOR_TOKEN=[REDACTED – keep existing value in your .env]
 
     # MongoDB
-    MONGO_INITDB_ROOT_USERNAME=root
-    MONGO_INITDB_ROOT_PASSWORD=[REDACTED – keep existing value in your .env]
     MONGO_USERNAME=root
     MONGO_PASSWORD=[REDACTED – keep existing value in your .env]
     MONGO_DATABASE=registry
